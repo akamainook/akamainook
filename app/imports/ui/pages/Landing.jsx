@@ -1,13 +1,22 @@
 import React from 'react';
-import { Container, Image, Grid, Input, Card, Label } from 'semantic-ui-react';
+import { Container, Image, Grid, Input, Card, Label, Button } from 'semantic-ui-react';
+import { NavLink, withRouter } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react/dist/commonjs/collections/Menu';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
+
+  handleClick = (tag) => {
+    saveTag(tag).then(() =>
+        this.props.history.push('/home')
+    )
+  };
+
   render() {
     return (
         <div className="middleContent">
           <Container>
-            <Grid fluid container rows={4}>
+            <Grid fluid container rows={5}>
               <Grid.Row centered className="logoPlaceholder">
                 <p id="akamai">Akamai</p><p id="nook">Nook</p>
               </Grid.Row>
@@ -21,6 +30,15 @@ class Landing extends React.Component {
               </Grid.Row>
               <Grid.Row>
                 <Input id="searchBar" floated='right' icon='search' placeholder='Find your Nook'/>
+              </Grid.Row>
+              <Grid.Row>
+                <Button
+                    onClick={this.handleClick('ac')}>Air Conditioned</Button>
+                <Button>WiFi</Button>
+                <Button>Able to eat</Button>
+                <Button>Quiet</Button>
+                <Button>Populated</Button>
+                <Button>Scenic</Button>
               </Grid.Row>
               <Grid.Row className="cards">
                 <Grid fluid container columns={3}>
@@ -107,4 +125,4 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+export default withRouter(Landing);
