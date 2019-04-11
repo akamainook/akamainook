@@ -32,7 +32,7 @@ class App extends React.Component {
               <Route path="/addnook" component={AddNook}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <Route path="/admin" component={ListStuffAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>

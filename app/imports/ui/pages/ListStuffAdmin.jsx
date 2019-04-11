@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Table, Header, Loader } from 'semantic-ui-react';
+import { Container, Table, Header, Image, Card, Icon, Button } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/stuff';
 import StuffItemAdmin from '/imports/ui/components/StuffItemAdmin';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -8,31 +8,33 @@ import PropTypes from 'prop-types';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListStuffAdmin extends React.Component {
-
-  /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
-  render() {
-    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
-  }
-
   /** Render the page once subscriptions have been received. */
-  renderPage() {
+  render() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">List Stuff (Admin)</Header>
-          <Table celled>
-            <Table.Header>
-              <Table.Row>
-                <Table.HeaderCell>Name</Table.HeaderCell>
-                <Table.HeaderCell>Quantity</Table.HeaderCell>
-                <Table.HeaderCell>Condition</Table.HeaderCell>
-                <Table.HeaderCell>Owner</Table.HeaderCell>
-              </Table.Row>
-            </Table.Header>
-            <Table.Body>
-              {this.props.stuffs.map((stuff) => <StuffItemAdmin key={stuff._id} stuff={stuff} />)}
-            </Table.Body>
-          </Table>
-        </Container>
+         <Header as="h2" textAlign="center">Pending Spots</Header>
+         <Card centered>
+           <Card.Content>
+             <Image floated={'right'} size={'mini'} src={'http://www.ics.hawaii.edu/' +
+             'wp-content/uploads/2015/09/post318b.jpg'}/>
+             {/* Name of Person */}
+             <Card.Header>Philip Johnson</Card.Header>
+             {/* Name of Spot */}
+             <Card.Meta>ICSpace</Card.Meta>
+             {/* Description of Spot */}
+             <Card.Description>
+               Pacific Ocean Science and Technology (POST) Building, POST 318B
+             </Card.Description>
+             {/* Approval/Disproval Buttons */}
+             <Button>
+               <Icon color='green' name={'checkmark'}/>
+             </Button>
+             <Button>
+               <Icon color='red' name={'close'}/>
+             </Button>
+           </Card.Content>
+         </Card>
+       </Container>
     );
   }
 }
