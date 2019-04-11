@@ -24,3 +24,56 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.middleContent {
+  background-image: url("./public/image/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#description {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 75px;
+  text-align: center;
+}
+
+.cards {
+  width: 500px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 100px;
+}
+
+.logoPlaceholder {
+  position: relative;
+  margin-top: 100px;
+  text-align-all: center;
+  font-size: 70px;
+  color: ghostwhite;
+}
+
+#akamai {
+  -webkit-text-stroke: 1px black;
+  font-weight: bold;
+}
+
+#nook {
+  -webkit-text-stroke: 1px black;
+  font-weight: bold;
+  color: green;
+}
+
+#credit {
+  color: gainsboro;
+}
+
+#searchBar {
+  position: relative;
+  text-align-all: center;
+  width: 1075px;
+  align-content: center;
+  text-align: center;
+  margin-left: 35px;
+}
