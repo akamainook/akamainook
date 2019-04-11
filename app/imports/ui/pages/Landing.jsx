@@ -26,7 +26,7 @@ class Landing extends React.Component {
                 <Grid fluid container columns={3}>
                   <Grid.Column>
                     <Card fluid>
-                      <Image src="./public/images/rec1.jpg"/>
+                      <Image src="rec1.jpg"/>
                       <Card.Content>
                         <Card.Header>ICSpace</Card.Header>
                         <Card.Meta>
@@ -103,7 +103,6 @@ class Landing extends React.Component {
           </Container>
           <p id="credit">Photo by Ricardo Esquivel from Pexels</p>
         </div>
-
     );
   }
 }
