@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Card, Container, Header, Image } from 'semantic-ui-react';
+import { Grid, Card, Container, Header, Image, Button } from 'semantic-ui-react';
 
 /** A simple static component to render some text for the Home page. */
 class Profile extends React.Component {
@@ -12,7 +12,12 @@ class Profile extends React.Component {
               'wp-content/uploads/2015/09/post318b.jpg'} circular/>
             </Grid.Column>
             <Grid.Column>
-              <Header as={'h3'} textAlign={'center'}> </Header>
+              <Grid.Row>
+                <Button size={'huge'} color={'red'}>Change Email</Button>
+              </Grid.Row>
+              <Grid.Row>
+                <Button size={'huge'} color={'red'}> Change Password</Button>
+              </Grid.Row>
             </Grid.Column>
           </Grid>
           <Header as="h2" textAlign="center">Your Spots</Header>
