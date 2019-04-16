@@ -1,13 +1,84 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" }
+    {
+      "email": "notadmin@foo.com",
+      "password": "notpassword",
+      "role": "admin"
+    },
+    {
+      "email": "luke@foo.com",
+      "password": "changedme"
+    }
   ],
-
-  "defaultData": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
-    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
-    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
-    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  "defaultNooks": [
+    {
+      "nookName": "ICSpace",
+      "address": "POST 318B",
+      "images": [
+        "http://www.ics.hawaii.edu/wp-content/uploads/2015/09/post318b.jpg"
+      ],
+      "description": "POST 318B is an interactive classroom intended for the use of the ICS Community, which is defined as:  ICS undergraduate majors, ICS graduate students, ICS faculty, and ICS staff.  Guests are welcome as long as they are accompanied by an ICS Community member.",
+      "startHour": "Anytime",
+      "endHour": "Anytime",
+      "owner": "john@foo.com",
+      "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/"
+    },
+    {
+      "nookName": "Hamilton Library (2nd Floor - Main Building) Group Study Rooms",
+      "address": "2550 McCarthy Mall",
+      "images": [
+        "http://manoa.hawaii.edu/library/wp-content/uploads/2017/10/groupstudy.jpg",
+        "http://manoa.hawaii.edu/library/wp-content/uploads/floorplans/Hamilton-2nd-Floor.png",
+        "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/university-of-hawaii-manoa-7037e8e9.jpg"
+      ],
+      "description": "There are six group study rooms on the 2nd Floor of Hamilton Library (Main) that can be reserved by University of Hawaii students, faculty, and staff.",
+      "startHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
+      "endHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
+      "owner": "john@foo.com",
+      "webLink": "http://manoa.hawaii.edu/library/services/study-spaces/group-study-rooms/",
+      "tags": [
+        "Quiet",
+        "Internet",
+        "A/C",
+        "Indoors"
+      ]
+    },
+    {
+      "nookName": "Learning Emporium",
+      "address": "Bilger Addition, Room 209",
+      "images": [
+        "learningemporium_files/stacks-image-b6bea4c-1200x904.jpg"
+      ],
+      "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
+      "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+      "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+      "owner": "john@foo.com",
+      "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
+      "tags": [
+        "Loud",
+        "Resources",
+        "Internet",
+        "Indoors"
+      ]
+    },
+    {
+      "nookName": "Sinclair Library",
+      "address": " 2425 Campus Rd",
+      "images": [
+        "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/sinclair002.jpg"
+      ],
+      "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
+      "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+      "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+      "owner": "john@foo.com",
+      "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
+      "tags": [
+        "Quiet",
+        "Food & Drink Friendly",
+        "Long Hours",
+        "Internet",
+        "Indoors"
+      ]
+    }
   ]
 }
