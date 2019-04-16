@@ -21,7 +21,13 @@
       "startHour": "Anytime",
       "endHour": "Anytime",
       "owner": "john@foo.com",
-      "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/"
+      "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/",
+      "tags": [
+        "Moderate Volume",
+        "Internet",
+        "A/C",
+        "Resources"
+      ]
     },
     {
       "nookName": "Hamilton Library (2nd Floor - Main Building) Group Study Rooms",
