@@ -11,7 +11,7 @@ class Footer extends React.Component {
           <Grid container columns={2}>
             <Grid.Column>About Akamai Nook
               <hr/>
-              <p>Akamai Nook was created by a team of college students who want
+              <p>Akamai Nook is created by a team of college students who want
                 to provide a simple and efficient way to find and share
                 study spots on Oahu.
               </p>

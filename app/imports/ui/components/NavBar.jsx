@@ -13,9 +13,7 @@ export default class TopMenu extends React.Component {
                        exact to="/home"
                        position="right">HOME</Menu.Item>
             <Menu.Item as={NavLink} activeClassName="active"
-                       exact to="/addnook">ADD A NOOK</Menu.Item>
-            <Menu.Item as={NavLink} activeClassName="active"
-                       exact to="/listnook">NOOK LISTINGS</Menu.Item>
+                       exact to="/addnook">ADD A SPOT</Menu.Item>
             <Menu.Item as={NavLink} activeClassName="active"
                        exact to="/profile">PROFILE</Menu.Item>
             <Menu.Item as={NavLink} activeClassName="active"
