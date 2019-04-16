@@ -6,12 +6,6 @@ import { Menu } from 'semantic-ui-react/dist/commonjs/collections/Menu';
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
 
-  handleClick = (tag) => {
-    saveTag(tag).then(() =>
-        this.props.history.push('/home')
-    )
-  };
-
   render() {
     return (
         <div className="middleContent">
@@ -32,8 +26,8 @@ class Landing extends React.Component {
                 <Input id="searchBar" floated='right' icon='search' placeholder='Find your Nook'/>
               </Grid.Row>
               <Grid.Row>
-                <Button
-                    onClick={this.handleClick('ac')}>Air Conditioned</Button>
+                <Button as={NavLink} activeClassName="active"
+                        exact to="/home">Air Conditioned</Button>
                 <Button>WiFi</Button>
                 <Button>Able to eat</Button>
                 <Button>Quiet</Button>
