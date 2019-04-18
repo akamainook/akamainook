@@ -1,13 +1,13 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Table, Header, Loader } from 'semantic-ui-react';
-import { Nooks } from '/imports/api/nook/nook';
-import NookItem from '/imports/ui/components/NookItem';
+import { Stuffs } from '/imports/api/stuff/stuff';
+import StuffItem from '/imports/ui/components/StuffItem';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
-/** Renders a table containing all of the Stuff documents. Use <NookItem> to render each row. */
-class ListNook extends React.Component {
+/** Renders a table containing all of the Nook documents. Use <NookItem> to render each row. */
+class ListStuff extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -18,7 +18,7 @@ class ListNook extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">List Nook</Header>
+          <Header as="h2" textAlign="center">List Stuff</Header>
           <Table celled>
             <Table.Header>
               <Table.Row>
@@ -29,7 +29,7 @@ class ListNook extends React.Component {
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {this.props.Nooks.map((nook) => <NookItem key={nook._id} nook={nook} />)}
+              {this.props.stuffs.map((stuff) => <StuffItem key={stuff._id} stuff={stuff} />)}
             </Table.Body>
           </Table>
         </Container>
@@ -37,18 +37,18 @@ class ListNook extends React.Component {
   }
 }
 
-/** Require an array of Nook documents in the props. */
-ListNook.propTypes = {
-  Nooks: PropTypes.array.isRequired,
+/** Require an array of Stuff documents in the props. */
+ListStuff.propTypes = {
+  stuffs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
-  // Get access to Nook documents.
-  const subscription = Meteor.subscribe('Nook');
+  // Get access to Stuff documents.
+  const subscription = Meteor.subscribe('Stuff');
   return {
-    Nooks: Nooks.find({}).fetch(),
+    stuffs: Stuffs.find({}).fetch(),
     ready: subscription.ready(),
   };
-})(ListNook);
+})(ListStuff);
