@@ -1,4 +1,5 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import { Grid, Container, Header, Image, Card, Label, Button } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ class Profile extends React.Component {
             <Grid.Column width={6}>
               <Image size={'medium'}
                      src={'https://cdn.vox-cdn.com/thumbor/81dix4pSzNqGq5Lq0PYmALAtWPc=/0x0:1920x803/1200x800/filters:focal(1140x0:1446x306)/cdn.vox-cdn.com/uploads/chorus_image/image/62934392/detective_pikachu_trailer_25_1920.0.jpg'} circular/>
-              <Header centered>{user.email}</Header>
+              <Header centered>{Meteor.user().emails[0].address}</Header>
               <p>I am a undergraduate student that is developing this site!</p>
               <NavLink to="/edit">Edit Profile</NavLink>
             </Grid.Column>

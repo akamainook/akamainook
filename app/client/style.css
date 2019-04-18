@@ -74,6 +74,10 @@ body {
   color: gainsboro;
 }
 
+#credit2 {
+  font-size: 8px;
+}
+
 #searchBar {
   position: relative;
   text-align-all: center;

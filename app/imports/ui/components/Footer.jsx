@@ -7,7 +7,7 @@ import { Menu } from 'semantic-ui-react/dist/commonjs/collections/Menu';
 class Footer extends React.Component {
   render() {
     return (
-        <div fluid className="footer-background">
+        <div className="footer-background">
           <Grid container columns={2}>
             <Grid.Column>About Akamai Nook
               <hr/>

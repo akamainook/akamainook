@@ -1,20 +1,40 @@
 import React from 'react';
-import { Auth } from 'aws-amplify';
-import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 import { Accounts } from 'meteor/accounts-base';
+import { Meteor } from 'meteor/meteor';
+import { Auth } from 'aws-amplify';
+import { Container, Form, Grid, Header, Message, Segment, Checkbox } from 'semantic-ui-react';
+
 
 /**Code inspired by https://serverless-stack.com/chapters/allow-users-to-change-passwords.html **/
 export default class Edit extends React.Component {
 
+  /** Initialize component state with properties for login and redirection. */
   constructor(props) {
     super(props);
+    this.state = { email: '', password: '', error: '', redirectToReferer: false };
+    // Ensure that 'this' is bound to this component in these two functions.
+    // https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-    this.state = {
-      password: "",
-      oldPassword: "",
-      isChanging: false,
-      confirmPassword: ""
-    };
+  /** Update the form controls each time the user interacts with them. */
+  handleChange(e, { name, value }) {
+    this.setState({ [name]: value });
+  }
+
+  /** Handle Signin submission using Meteor's account mechanism. */
+  handleSubmit() {
+    const { oldPassword, newPassword, confirmPassword } = this.state;
+    Meteor.changePassword(oldPassword, newPassword, (err) => {
+      if (err) {
+        this.setState({ error: err.reason });
+      } else if(oldPassword !== newPassword) {
+        this.setState({error: err.reason })
+      }else {
+        this.setState({ error: '', redirectToReferer: true });
+      }
+    });
   }
 
   validateForm() {
@@ -25,47 +45,52 @@ export default class Edit extends React.Component {
     );
   }
 
-  handleChange = event => {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  };
-
-  handleSubmit = async event => {
-    event.preventDefault();
-
-    this.setState({ isChanging: true });
-
-    try {
-      const currentUser = await Auth.currentAuthenticatedUser();
-      await Auth.changePassword(
-          currentUser,
-          this.state.oldPassword,
-          this.state.password
-      );
-
-      this.props.history.push("/profile");
-    } catch (e) {
-      alert(e.message);
-      this.setState({ isChanging: false});
-    }
-  };
-
   /** Display the Edit profile form. */
   render() {
+    const { from } = this.props.location.state || { from: { pathname: '/' } };
+    // if correct authentication, redirect to page instead of login screen
+    if (this.state.redirectToReferer) {
+      return <Redirect to={from}/>;
+    }
+
     return (
         <Container>
-          <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
-            <Grid.Column>
-              <Header as="h2" textAlign="center">
-                Edit your profile
-              </Header>
+          <Grid textAlign="center" verticalAlign="middle" centered rows={2}>
+            <Header as="h2" textAlign="center">
+              Edit your profile
+            </Header>
+            <Grid.Row>
+              <Header>Change your icon</Header>
+              <p id="credit2">Images provided by FreePik from https://www.freepik.com/</p>
+              <Grid columns={5}>
+                <Form>
+                <Grid.column>
+                  <image src="cat.png"/>
+                </Grid.column>
+                <Grid.Column>
+                  <image src="dog.png"/>
+                </Grid.Column>
+                <Grid.Column>
+                  <image src="girl.png"/>
+                </Grid.Column>
+                <Grid.Column>
+                  <image src="boy.png"/>
+                </Grid.Column>
+                <Grid.Column>
+                  <image src="star.png"/>
+                </Grid.Column>
+                </Form>
+              </Grid>
+            </Grid.Row>
+            <Grid.Row>
+
               <Form onSubmit={this.handleSubmit}>
                 <Segment stacked>
-                  <Header>Email goes here</Header>
+                  <Header>{Meteor.user().emails[0].address}</Header>
                   <Form.Input
                       label="Change Password"
                       name="oldPassword"
+                      ref="oldPassword"
                       type="password"
                       placeholder="Old password"
                       onChange={this.handleChange}
@@ -87,7 +112,16 @@ export default class Edit extends React.Component {
                       content="Submit"/>
                 </Segment>
               </Form>
-            </Grid.Column>
+            {this.state.error === '' ? (
+                ''
+            ) : (
+                <Message
+                    error
+                    header="Password change was not successful"
+                    content={this.state.error}
+                />
+            )}
+            </Grid.Row>
           </Grid>
         </Container>
     );
