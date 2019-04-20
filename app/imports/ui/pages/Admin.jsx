@@ -3,12 +3,35 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Card } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/stuff';
 import AdminComponent from 'app/imports/ui/components/AdminComponent.jsx';
-import { withTracker } from 'meteor/react-meteor-data';
+import { Bert } from 'meteor/themeteorchef:bert';
 import PropTypes from 'prop-types';
-
+import { Nooks } from '../../api/nook/nook';
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Admin extends React.Component {
-  /** Render the page once subscriptions have been received. */
+
+  constructor(props) {
+   super(props);
+   this.approve = this.approve.bind(this);
+   this.insertCallback = this.insertCallback.bind(this);
+   this.formRef = null;
+  }
+
+  insertCallback(error) {
+    if (error) {
+      Bert.alert({ type: 'danger', message: `Approval failed: ${error.message}` });
+    } else {
+      Bert.alert({ type: 'success', message: 'Approval succeeded' });
+      this.formRef.reset();
+    }
+  }
+
+  approve(data) {
+    const { nookName, address, images, description, startHour, endHour, owner, webLink, tags } = data;
+    Nooks.insert({ nookName, address, images,
+      description, startHour, endHour, owner, webLink, tags }, this.insertCallback);
+  }
+
+
   render() {
     return (
         <Container>

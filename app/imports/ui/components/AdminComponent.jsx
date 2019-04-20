@@ -5,6 +5,13 @@ import { withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List nook (Admin) table. See pages/ListnookAdmin.jsx. */
 class AdminComponent extends React.Component {
+
+  needsApproval(nook) {
+    if (this.props.nook.approved === false) {
+      this.render();
+    }
+  }
+
   render() {
     return (
         <Card centered>
