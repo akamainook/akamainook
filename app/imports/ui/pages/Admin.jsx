@@ -3,22 +3,35 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Card } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/stuff';
 import AdminComponent from 'app/imports/ui/components/AdminComponent.jsx';
-import ApprovalButtons from 'app/imports/ui/components/ApprovalButtons';
-import { Bert } from 'meteor/themeteorchef:bert';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { Nooks } from '../../api/nook/nook';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Admin extends React.Component {
 
-  constructor(props) {
-   super(props);
-   this.approve = this.approve.bind(this);
-   this.insertCallback = this.insertCallback.bind(this);
-   this.formRef = null;
+  /* constructor(props) {
+    super(props);
+    // When delete is clicked, remove nook
+    this.deleteOnClick = this.deleteOnClick.bind(this);
+    // When approve is clicked, insert nook
+    this.insertOnClick() = this.insertOnClick().bind(this);
   }
 
+// When delete button is pressed, ask for confirmation to delete nook
+  deleteOnClick() {
+    if(confirm('Are you sure you want to delete this nook?')) {
+      Nooks.remove(this.props.nook._id, this.deleteCallback());
+    }
+  }
+
+// When approve button is pressed ask for confirmation to insert nook
+  insertOnClick() {
+    if (confirm('Are you sure you want to approve this nook?')) {
+      Nooks.add(this.props.nook._id, this.insertCallback());
+    }
+  }
+
+  // Bert Message for insertion
   insertCallback(error) {
     if (error) {
       Bert.alert({ type: 'danger', message: `Approval failed: ${error.message}` });
@@ -28,12 +41,24 @@ class Admin extends React.Component {
     }
   }
 
-  approve(data) {
-    const { nookName, address, images, description, startHour, endHour, owner, webLink, tags } = data;
-    Nooks.insert({ nookName, address, images,
-      description, startHour, endHour, owner, webLink, tags }, this.insertCallback);
+  // Bert Message for deletion
+  deleteCallBack(error) {
+    if (error) {
+      Bert.alert({ type: 'danger', message: 'Delete Failed' });
+    } else {
+      Bert.alert({ type: 'success', message: 'Delete Succeded' });
+    }
   }
 
+  // On click, insert the data.
+  approve(data) {
+    const { nookName, address, images, description, startHour, endHour, owner, webLink, tags, approval } = data;
+    Nooks.insert({
+      nookName, address, images,
+      description, startHour, endHour, owner, webLink, tags, approval ={ true }
+    }, this.insertCallback);
+  }
+  */
 
   render() {
     return (
@@ -41,7 +66,17 @@ class Admin extends React.Component {
           <Header as={'h2'} textAlign={'center'} inverted>Pending Spots</Header>
           <Card.Group>
             {this.props.nook.map((nook, index) => <AdminComponent key={index} nook={nook}/>)}
-            {this.props.nook.map((nook, index) => <ApprovalButtons key={index} nook={nook} />)}
+          </Card.Group>
+        </Container>
+    );
+  }
+
+  renderPage() {
+    return (
+        <Container>
+          <Header as={'h2'} textAlign={'center'} inverted>Pending Approval</Header>
+          <Card.Group>
+            {this.props.nook.map((nook, index) => <AdminComponent key={index} nook={nook} />)}
           </Card.Group>
         </Container>
     );

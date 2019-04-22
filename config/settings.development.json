@@ -22,7 +22,9 @@
       "endHour": "Anytime",
       "owner": "luke@foo.com",
       "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/",
-      "tags": [""]
+      "tags": [""],
+      "approval": true
+
     },
     {
       "nookName": "Hamilton Library (2nd Floor - Main Building) Group Study Rooms",
@@ -42,7 +44,9 @@
         "Internet",
         "A/C",
         "Indoors"
-      ]
+      ],
+      "approval": true
+
     },
     {
       "nookName": "Learning Emporium",
@@ -60,7 +64,9 @@
         "Resources",
         "Internet",
         "Indoors"
-      ]
+      ],
+      "approval": true
+
     },
     {
       "nookName": "Sinclair Library",
@@ -79,7 +85,9 @@
         "Long Hours",
         "Internet",
         "Indoors"
-      ]
+      ],
+      "approval": true
+
     },
     {
       "nookName": "Campus Center",
@@ -97,7 +105,9 @@
         "Outdoor",
         "Ample restrooms",
         "Restaurants nearby"
-      ]
+      ],
+      "approval": true
+
     },
     {
       "nookName": "The Quad",
@@ -113,7 +123,8 @@
       "tags": [
         "Outdoor",
         "Scenic"
-      ]
+      ],
+      "approval": true
     }
   ]
 }
