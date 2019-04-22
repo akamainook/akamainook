@@ -3,9 +3,12 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Card } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/stuff';
 import AdminComponent from 'app/imports/ui/components/AdminComponent.jsx';
+import ApprovalButtons from 'app/imports/ui/components/ApprovalButtons';
 import { Bert } from 'meteor/themeteorchef:bert';
+import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Nooks } from '../../api/nook/nook';
+
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Admin extends React.Component {
 
@@ -38,6 +41,7 @@ class Admin extends React.Component {
           <Header as={'h2'} textAlign={'center'} inverted>Pending Spots</Header>
           <Card.Group>
             {this.props.nook.map((nook, index) => <AdminComponent key={index} nook={nook}/>)}
+            {this.props.nook.map((nook, index) => <ApprovalButtons key={index} nook={nook} />)}
           </Card.Group>
         </Container>
     );
