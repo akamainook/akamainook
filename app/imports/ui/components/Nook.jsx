@@ -15,9 +15,6 @@ class Nook extends React.Component {
               {this.props.nook.description}
             </Card.Description>
           </Card.Content>
-          <Card.Content extra>
-            <AddNote owner={this.props.nook.owner} nookId={this.props.nook._id}/>
-          </Card.Content>
         </Card>
     );
   }
