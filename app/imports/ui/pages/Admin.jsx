@@ -2,14 +2,14 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Header, Card } from 'semantic-ui-react';
 import { Stuffs } from '/imports/api/stuff/stuff';
-import AdminComponent from 'app/imports/ui/components/AdminComponent.jsx';
+import AdminComponent from '/imports/ui/components/AdminComponent.jsx';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Admin extends React.Component {
 
-  /* constructor(props) {
+   constructor(props) {
     super(props);
     // When delete is clicked, remove nook
     this.deleteOnClick = this.deleteOnClick.bind(this);
