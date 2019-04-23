@@ -14,8 +14,13 @@ const NookSchema = new SimpleSchema({
   startHour: SimpleSchema.oneOf(String, Number),
   endHour: SimpleSchema.oneOf(String, Number),
   owner: String,
+<<<<<<< HEAD
   webLink: String,
   tags: String,
+=======
+  tags: Array,
+  approved: false,
+>>>>>>> bb7737382788f55029b5509853fc169dccc78082
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */

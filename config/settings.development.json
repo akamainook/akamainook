@@ -21,10 +21,13 @@
       "startHour": "Anytime",
       "endHour": "Anytime",
       "owner": "luke@foo.com",
-      "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/",
-      "tags": [""],
+      "tags": [
+        "Moderate Volume",
+        "Internet",
+        "A/C",
+        "Resources"
+      ],
       "approval": true
-
     },
     {
       "nookName": "Hamilton Library (2nd Floor - Main Building) Group Study Rooms",
@@ -46,7 +49,6 @@
         "Indoors"
       ],
       "approval": true
-
     },
     {
       "nookName": "Learning Emporium",
@@ -58,7 +60,6 @@
       "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
       "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
       "owner": "luke@foo.com",
-      "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
       "tags": [
         "Loud",
         "Resources",
@@ -66,7 +67,6 @@
         "Indoors"
       ],
       "approval": true
-
     },
     {
       "nookName": "Sinclair Library",
@@ -78,7 +78,6 @@
       "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
       "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
       "owner": "luke@foo.com",
-      "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
       "tags": [
         "Quiet",
         "Food & Drink Friendly",
@@ -87,7 +86,6 @@
         "Indoors"
       ],
       "approval": true
-
     },
     {
       "nookName": "Campus Center",
@@ -99,7 +97,6 @@
       "startHour": "24/7",
       "endHour": "24/7",
       "owner": "luke@foo.com",
-      "webLink": "https://www.hawaii.edu/campuscenter/",
       "tags": [
         "Populated",
         "Outdoor",
@@ -107,7 +104,6 @@
         "Restaurants nearby"
       ],
       "approval": true
-
     },
     {
       "nookName": "The Quad",
@@ -119,7 +115,6 @@
       "startHour": "24/7",
       "endHour": "24/7",
       "owner": "luke@foo.com",
-      "webLink": "none",
       "tags": [
         "Outdoor",
         "Scenic"
