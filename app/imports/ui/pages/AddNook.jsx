@@ -3,8 +3,8 @@ import { Nooks, NookSchema } from '/imports/api/nook/nook';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
-import NumField from 'uniforms-semantic/NumField';
-import SelectField from 'uniforms-semantic/SelectField';
+// import NumField from 'uniforms-semantic/NumField';
+// import SelectField from 'uniforms-semantic/SelectField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import HiddenField from 'uniforms-semantic/HiddenField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
@@ -13,7 +13,6 @@ import { Meteor } from 'meteor/meteor';
 
 /** Renders the Page for adding a document. */
 class AddNook extends React.Component {
-
 
   /** Bind 'this' so that a ref to the AddNook form can be saved and communicated between render() and submit() */
   constructor(props) {
@@ -38,7 +37,10 @@ class AddNook extends React.Component {
     const { nookName, address, images, description, startHour, endHour, tags } = data;
     const owner = Meteor.user().username;
     const approved = false;
-    Nooks.insert({ nookName, address, images, description, startHour, endHour, owner, tags }, this.insertCallback());
+    Nooks.insert({
+      nookName, address, images, description, startHour, endHour,
+      owner, tags, approved,
+    }, this.insertCallback());
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -47,11 +49,13 @@ class AddNook extends React.Component {
         <Grid container centered>
           <Grid.Column>
             <Header as="h2" textAlign="center">Add Nook</Header>
-            <AutoForm ref={(ref) => { this.formRef = ref; }} schema={NookSchema} onSubmit={this.submit}>
+            <AutoForm ref={(ref) => {
+              this.formRef = ref;
+            }} schema={NookSchema} onSubmit={this.submit}>
               <Segment>
-                <TextField name='location'/>
-                <TextField name='description'/>
-                <TextField name='images'/>
+                <TextField name='Name'/>
+                <TextField name='Description'/>
+                <TextField name='Images'/>
                 <TextField name='hours'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
