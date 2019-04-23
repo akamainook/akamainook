@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stuffs, StuffSchema } from '/imports/api/stuff/stuff';
+import { Nooks, NookSchema } from '/imports/api/nook/nook';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
@@ -14,13 +14,40 @@ import { Meteor } from 'meteor/meteor';
 /** Renders the Page for adding a document. */
 class AddNook extends React.Component {
 
+
+  /** Bind 'this' so that a ref to the AddNook form can be saved and communicated between render() and submit() */
+  constructor(props) {
+    super(props);
+    this.submit = this.submit.bind(this);
+    this.insertCallback = this.insertCallback.bind(this);
+    this.formRef = null;
+  }
+
+  /** Notify user results of AddNook. */
+  insertCallback(error) {
+    if (error) {
+      Bert.alert({ type: 'danger', message: `Add failed: ${error.message}` });
+    } else {
+      Bert.alert({ type: 'success', message: 'Add succeeded' });
+      this.formRef.reset();
+    }
+  }
+
+  /** Insert the data when clicked */
+  submit(data) {
+    const { nookName, address, images, description, startHour, endHour, tags } = data;
+    const owner = Meteor.user().username;
+    const approved = false;
+    Nooks.insert({ nookName, address, images, description, startHour, endHour, owner, tags }, this.insertCallback());
+  }
+
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
   render() {
     return (
         <Grid container centered>
           <Grid.Column>
             <Header as="h2" textAlign="center">Add Nook</Header>
-            <AutoForm ref={(ref) => { this.formRef = ref; }} schema={StuffSchema} onSubmit={this.submit}>
+            <AutoForm ref={(ref) => { this.formRef = ref; }} schema={NookSchema} onSubmit={this.submit}>
               <Segment>
                 <TextField name='location'/>
                 <TextField name='description'/>

@@ -16,7 +16,7 @@ const NookSchema = new SimpleSchema({
   owner: String,
   webLink: String,
   tags: Array,
-  approved: false,
+  approved: Boolean,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
