@@ -53,8 +53,8 @@ class AddNook extends React.Component {
                 <TextField name='nookName'/>
                 <TextField name='address'/>
                 <TextField name='images'/>
-                <TextField name='startHour'/>
-                <TextField name='endHour'/>
+                <SelectField name='startHour'/>
+                <SelectField name='endHour'/>
                 <TextField name='webLink'/>
                 <LongTextField name='description'/>
                 <TextField name='tags'/>

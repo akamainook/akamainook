@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Label } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
@@ -11,9 +11,16 @@ class Nook extends React.Component {
           <Card.Content>
             <Card.Header>{this.props.nook.nookName}</Card.Header>
             <Card.Meta>{this.props.nook.address}</Card.Meta>
+            <Card.Meta>{this.props.nook.startHour} - {this.props.nook.endHour}</Card.Meta>
             <Card.Description>
               {this.props.nook.description}
             </Card.Description>
+            <Card.Content>
+            </Card.Content>
+            <Card.Meta>{this.props.nook.webLink}</Card.Meta>
+            <Label as='a' tag>
+              {this.props.nook.tags}
+            </Label>
           </Card.Content>
         </Card>
     );
