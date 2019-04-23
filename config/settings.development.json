@@ -20,6 +20,7 @@
       "description": "POST 318B is an interactive classroom intended for the use of the ICS Community, which is defined as:  ICS undergraduate majors, ICS graduate students, ICS faculty, and ICS staff.  Guests are welcome as long as they are accompanied by an ICS Community member.",
       "startHour": "Anytime",
       "endHour": "Anytime",
+<<<<<<< HEAD
       "owner": "luke@foo.com",
       "tags": [
         "Moderate Volume",
@@ -28,6 +29,10 @@
         "Resources"
       ],
       "approval": true
+=======
+      "owner": "john@foo.com",
+      "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/"
+>>>>>>> issue-34
     },
     {
       "nookName": "Hamilton Library (2nd Floor - Main Building) Group Study Rooms",
@@ -40,15 +45,19 @@
       "description": "There are six group study rooms on the 2nd Floor of Hamilton Library (Main) that can be reserved by University of Hawaii students, faculty, and staff.",
       "startHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
       "endHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
-      "owner": "luke@foo.com",
+      "owner": "john@foo.com",
       "webLink": "http://manoa.hawaii.edu/library/services/study-spaces/group-study-rooms/",
       "tags": [
         "Quiet",
         "Internet",
         "A/C",
         "Indoors"
+<<<<<<< HEAD
       ],
       "approval": true
+=======
+      ]
+>>>>>>> issue-34
     },
     {
       "nookName": "Learning Emporium",
@@ -59,14 +68,23 @@
       "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
       "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
       "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+<<<<<<< HEAD
       "owner": "luke@foo.com",
+=======
+      "owner": "john@foo.com",
+      "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
+>>>>>>> issue-34
       "tags": [
         "Loud",
         "Resources",
         "Internet",
         "Indoors"
+<<<<<<< HEAD
       ],
       "approval": true
+=======
+      ]
+>>>>>>> issue-34
     },
     {
       "nookName": "Sinclair Library",
@@ -77,13 +95,19 @@
       "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
       "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
       "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+<<<<<<< HEAD
       "owner": "luke@foo.com",
+=======
+      "owner": "john@foo.com",
+      "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
+>>>>>>> issue-34
       "tags": [
         "Quiet",
         "Food & Drink Friendly",
         "Long Hours",
         "Internet",
         "Indoors"
+<<<<<<< HEAD
       ],
       "approval": true
     },
@@ -120,6 +144,9 @@
         "Scenic"
       ],
       "approval": true
+=======
+      ]
+>>>>>>> issue-34
     }
   ]
 }
