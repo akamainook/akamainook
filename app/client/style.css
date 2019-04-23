@@ -10,6 +10,12 @@ body {
   padding-bottom: 20px;
 }
 
+.navbar-background {
+  background-color: #024731;
+  color: #C8C8C8;
+  margin-bottom: '10px'
+}
+
 .main-background {
   background-image: url("https://s3.amazonaws.com/thumbnails.thecrimson.com/photos/2017/12/06/194934_1326680.JPG.1500x1125_q95_crop-smart_upscale.jpg");
   background-size: cover;
