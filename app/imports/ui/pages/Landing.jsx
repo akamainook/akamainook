@@ -58,7 +58,7 @@ class Landing extends React.Component {
                         <Card.Meta>
                           <span className='location'>2465 Campus Rd, Honolulu, HI 96822</span>
                         </Card.Meta>
-                        <Card.Description>A populated place conveniently locted near food and beverage
+                        <Card.Description>A populated place conveniently located near food and beverage
                           stores. </Card.Description>
                       </Card.Content>
                       <Card.Content extra>
