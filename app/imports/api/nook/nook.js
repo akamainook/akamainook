@@ -9,14 +9,16 @@ const Nooks = new Mongo.Collection('Nooks');
 const NookSchema = new SimpleSchema({
   nookName: String,
   address: String,
-  images: Array,
+  images: { type: Array },
+  'images.$': { type: String },
   description: String,
   startHour: SimpleSchema.oneOf(String, Number),
   endHour: SimpleSchema.oneOf(String, Number),
   owner: String,
   webLink: String,
-  tags: Array,
-  approved: false,
+  tags: { type: Array },
+  'tags.$': { type: String },
+  approved: Boolean,
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */

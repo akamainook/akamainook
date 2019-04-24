@@ -1,8 +1,8 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Header, Card } from 'semantic-ui-react';
-import { Stuffs } from '/imports/api/stuff/stuff';
-import AdminComponent from 'app/imports/ui/components/AdminComponent.jsx';
+import { Nooks } from '/imports/api/stuff/stuff';
+import AdminComponent from '/imports/ui/components/AdminComponent.jsx';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
@@ -94,7 +94,7 @@ export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe('AdminComponent');
   return {
-    nooks: Stuffs.find({}).fetch(),
+    nooks: Nooks.find({}).fetch(),
     ready: subscription.ready(),
   };
 })(Admin);
