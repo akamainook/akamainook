@@ -8,58 +8,6 @@ import PropTypes from 'prop-types';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Admin extends React.Component {
-
-  /* constructor(props) {
-    super(props);
-    // When delete is clicked, remove nook
-    this.deleteOnClick = this.deleteOnClick.bind(this);
-    // When approve is clicked, insert nook
-    this.insertOnClick() = this.insertOnClick().bind(this);
-  }
-
-// When delete button is pressed, ask for confirmation to delete nook
-  deleteOnClick() {
-    if(confirm('Are you sure you want to delete this nook?')) {
-      Nooks.remove(this.props.nook._id, this.deleteCallback());
-    }
-  }
-
-// When approve button is pressed ask for confirmation to insert nook
-  insertOnClick() {
-    if (confirm('Are you sure you want to approve this nook?')) {
-      Nooks.add(this.props.nook._id, this.insertCallback());
-    }
-  }
-
-  // Bert Message for insertion
-  insertCallback(error) {
-    if (error) {
-      Bert.alert({ type: 'danger', message: `Approval failed: ${error.message}` });
-    } else {
-      Bert.alert({ type: 'success', message: 'Approval succeeded' });
-      this.formRef.reset();
-    }
-  }
-
-  // Bert Message for deletion
-  deleteCallBack(error) {
-    if (error) {
-      Bert.alert({ type: 'danger', message: 'Delete Failed' });
-    } else {
-      Bert.alert({ type: 'success', message: 'Delete Succeded' });
-    }
-  }
-
-  // On click, insert the data.
-  approve(data) {
-    const { nookName, address, images, description, startHour, endHour, owner, webLink, tags, approval } = data;
-    Nooks.insert({
-      nookName, address, images,
-      description, startHour, endHour, owner, webLink, tags, approval ={ true }
-    }, this.insertCallback);
-  }
-  */
-
   render() {
     return (
         <Container>
