@@ -58,6 +58,6 @@ NavBar.propTypes = {
 
 const NavBarContainer = withTracker(() => ({
   currentUser: Meteor.user() ? Meteor.user().username : '',
-}));
+}))(NavBar);
 
 export default withRouter(NavBarContainer);
