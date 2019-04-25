@@ -6,8 +6,9 @@ import { Menu } from 'semantic-ui-react/dist/commonjs/collections/Menu';
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
   render() {
+    const menuStyle = { marginTop: '10px' };
     return (
-        <div fluid className="footer-background">
+        <div style={menuStyle} fluid className="footer-background">
           <Grid container columns={2}>
             <Grid.Column>About Akamai Nook
               <hr/>

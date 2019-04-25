@@ -19,7 +19,7 @@ class ListNooks extends React.Component {
     return (
         <Container>
           <Header inverted as="h2" textAlign="center">List Nooks</Header>
-          <Card.Group>
+          <Card.Group stackable>
             {this.props.nooks.map((nook, index) => <Nook key={index} nook={nook}/>)}
           </Card.Group>
         </Container>
