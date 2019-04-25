@@ -8,7 +8,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListNook from '../pages/ListNook';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
+import ListNookAdmin from '../pages/ListNookAdmin';
 import AddNook from '../pages/AddNook';
 import EditNook from '../pages/EditNook';
 import NotFound from '../pages/NotFound';
@@ -32,9 +32,9 @@ class App extends React.Component {
               <Route path="/profile" component={Profile}/>
               <Route path="/home" component={Home}/>
               <ProtectedRoute path="/addnook" component={AddNook}/>
-              <Route path="/listnook" component={ListNook}/>
+              <Route path="/mynooks" component={ListNook}/>
               <ProtectedRoute path="/edit/:_id" component={EditNook}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <AdminProtectedRoute path="/admin" component={ListNookAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
