@@ -18,8 +18,8 @@ class ListNooks extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header inverted as="h2" textAlign="center">List Nooks</Header>
-          <Card.Group stackable>
+          <Header as="h2" textAlign="center">List Nooks</Header>
+          <Card.Group>
             {this.props.nooks.map((nook, index) => <Nook key={index} nook={nook}/>)}
           </Card.Group>
         </Container>

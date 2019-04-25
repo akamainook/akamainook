@@ -8,7 +8,7 @@ class Nook extends React.Component {
   render() {
     return (
         <Card>
-          <Image fluid src={this.props.nook.images} height="10em"/>
+          <Image fluid src={this.props.nook.images} size="large"/>
           <Card.Content>
             <Card.Header>{this.props.nook.nookName}</Card.Header>
             <Card.Meta>{this.props.nook.address}</Card.Meta>
