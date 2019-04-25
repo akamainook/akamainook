@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Label } from 'semantic-ui-react';
+import { Card, Image, Label, } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
@@ -8,6 +8,7 @@ class Nook extends React.Component {
   render() {
     return (
         <Card>
+          <Image fluid src={this.props.nook.images} height="10em"/>
           <Card.Content>
             <Card.Header>{this.props.nook.nookName}</Card.Header>
             <Card.Meta>{this.props.nook.address}</Card.Meta>
@@ -17,10 +18,12 @@ class Nook extends React.Component {
             </Card.Description>
             <Card.Content>
             </Card.Content>
-            <Card.Meta>{this.props.nook.webLink}</Card.Meta>
             <Label as='a' tag>
               {this.props.nook.tags}
             </Label>
+          </Card.Content>
+          <Card.Content extra>
+            <Link to={`/edit/${this.props.nook._id}`}>Edit</Link>
           </Card.Content>
         </Card>
     );
