@@ -1,7 +1,5 @@
 import React from 'react';
-import { Icon, Grid, Button } from 'semantic-ui-react';
-import { NavLink } from 'react-router-dom';
-import { Menu } from 'semantic-ui-react/dist/commonjs/collections/Menu';
+import { Icon, Grid, Button, Menu } from 'semantic-ui-react';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 class Footer extends React.Component {
@@ -19,7 +17,7 @@ class Footer extends React.Component {
             </Grid.Column>
             <Grid.Column>Links
               <hr/>
-              <Button   as='a'
+              <Button as='a'
                         href='https://github.com/akamainook' icon>
                 Our Github Page
                 <Icon huge="true" name='github square'/>
