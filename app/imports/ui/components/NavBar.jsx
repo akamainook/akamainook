@@ -20,11 +20,11 @@ class NavBar extends React.Component {
             {this.props.currentUser ? (
                 [
                   <Menu.Item as={NavLink} activeClassName="active"
-                             exact to="/addnook">ADD A SPOT</Menu.Item>,
+                             exact to="/addnook" key='add'>ADD A SPOT</Menu.Item>,
                   <Menu.Item as={NavLink} activeClassName="active"
-                             exact to="/profile">PROFILE</Menu.Item>,
+                             exact to="/profile" key='profile'>PROFILE</Menu.Item>,
                   <Menu.Item as={NavLink} activeClassName="active"
-                             exact to="/signout">SIGN OUT</Menu.Item>
+                             exact to="/signout" key='signout'>SIGN OUT</Menu.Item>,
                 ]
             ) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
@@ -34,9 +34,9 @@ class NavBar extends React.Component {
             {this.props.currentUser === '' ? (
                 [
                   <Menu.Item as={NavLink} activeClassName="active"
-                             exact to="/signin">SIGN IN</Menu.Item>,
+                             exact to="/signin" key='signin'>SIGN IN</Menu.Item>,
                   <Menu.Item as={NavLink} activeClassName="active"
-                             exact to="/signup">SIGN UP</Menu.Item>]
+                             exact to="/signup" key='signup'>SIGN UP</Menu.Item>]
             ) : ''}
           </Container>
         </Menu>

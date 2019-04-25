@@ -24,17 +24,19 @@ export default class Signup extends React.Component {
 
   /** Handle Signup submission using Meteor's account mechanism. */
   handleSubmit() {
+    const image = 'star.png';
     const { email, password, confirmPassword } = this.state;
-    Accounts.createUser({ email, username: email, password }, (err) => {
-      if (password !== confirmPassword) {
-        this.setState({error: err.reason});
-      }
-      if (err) {
-        this.setState({ error: err.reason });
-      } else {
-        // browserHistory.push('/login');
-      }
-    });
+    if (password !== confirmPassword) {
+      this.setState({ error: 'Passwords does not match' });
+    } else {
+      Accounts.createUser({ email, username: email, password, profile: { image: image } }, (err) => {
+        if (err) {
+          this.setState({ error: err.reason });
+        } else {
+          // browserHistory.push('/login');
+        }
+      });
+    }
   }
 
   /** Display the signup form. */

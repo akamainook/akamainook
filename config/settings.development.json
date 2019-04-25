@@ -1,6 +1,19 @@
 {
   "defaultAccounts": [
-    { "email": "notadmin@foo.com", "password": "notpassword", "role": "admin" },
-    { "email": "luke@foo.com", "password": "changedme"}
+    {
+      "email": "notadmin@foo.com",
+      "password": "notpassword",
+      "role": "admin",
+      "profile": {
+        "image": "boy.png"
+      }
+    },
+    {
+      "email": "luke@foo.com",
+      "password": "changedme",
+      "profile": {
+        "image": "cat.png"
+      }
+    }
   ]
 }

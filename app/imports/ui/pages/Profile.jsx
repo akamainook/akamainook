@@ -1,27 +1,19 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Grid, Container, Header, Image, Card, Label, Button } from 'semantic-ui-react';
+import { Grid, Container, Header, Image, Card, Label } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 /** A simple static component to render some text for the Home page. */
 class Profile extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    var user = JSON.parse(localStorage.getItem('user'));
-
     return (
         <Container className="profile">
           <Grid container>
             <Grid.Column width={6}>
               <Image size={'medium'}
-                     src={'https://cdn.vox-cdn.com/thumbor/81dix4pSzNqGq5Lq0PYmALAtWPc=/0x0:1920x803/1200x800/filters:focal(1140x0:1446x306)/cdn.vox-cdn.com/uploads/chorus_image/image/62934392/detective_pikachu_trailer_25_1920.0.jpg'} circular/>
-              <Header centered>{Meteor.user().emails[0].address}</Header>
-              <p>I am a undergraduate student that is developing this site!</p>
-              <NavLink to="/edit">Edit Profile</NavLink>
+                     src={Meteor.user().profile.image}/>
+              <Header>{Meteor.user().emails[0].address}</Header>
+              <NavLink to="/editProfile">Edit Profile</NavLink>
             </Grid.Column>
             <Grid.Column width={10}>
               <Header>Your Nooks:</Header>
@@ -55,5 +47,8 @@ class Profile extends React.Component {
     );
   }
 }
+
+Profile.propTypes = {
+};
 
 export default Profile;

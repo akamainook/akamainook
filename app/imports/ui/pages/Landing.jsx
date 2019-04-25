@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Image, Grid, Input, Card, Label, Button } from 'semantic-ui-react';
 import { NavLink, withRouter } from 'react-router-dom';
-import { Menu } from 'semantic-ui-react/dist/commonjs/collections/Menu';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -26,8 +25,7 @@ class Landing extends React.Component {
                 <Input id="searchBar" floated='right' icon='search' placeholder='Find your Nook'/>
               </Grid.Row>
               <Grid.Row>
-                <Button as={NavLink} activeClassName="active"
-                        exact to="/home">Air Conditioned</Button>
+                <Button>Air Conditioned</Button>
                 <Button>WiFi</Button>
                 <Button>Able to eat</Button>
                 <Button>Quiet</Button>
