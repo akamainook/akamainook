@@ -3,12 +3,14 @@ import { Card, Image, Label, } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 
-/** Renders a single row in the List Nook table. See pages/ListNook.jsx. */
+/** Renders a single card in the List Nook table. See pages/ListNook.jsx. */
 class NookAdmin extends React.Component {
   render() {
     return (
         <Card>
-          <Image fluid src={this.props.nook.images} size="large"/>
+          <Card.Content>
+            <Image fluid src={this.props.nook.images} size="large"/>
+          </Card.Content>
           <Card.Content>
             <Card.Header>{this.props.nook.nookName}</Card.Header>
             <Card.Meta>{this.props.nook.address}</Card.Meta>
@@ -16,8 +18,6 @@ class NookAdmin extends React.Component {
             <Card.Description>
               {this.props.nook.description}
             </Card.Description>
-            <Card.Content>
-            </Card.Content>
             <Label as='a' tag>
               {this.props.nook.tags}
             </Label>

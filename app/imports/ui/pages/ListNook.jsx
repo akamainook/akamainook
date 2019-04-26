@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Grid } from 'semantic-ui-react';
 import { Nooks } from '/imports/api/nook/nook';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -18,10 +18,10 @@ class ListNook extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">List Nooks</Header>
-          <Card.Group>
-            {this.props.nooks.map((nook, index) => <Nook key={index} nook={nook}/>)}
-          </Card.Group>
+          <Header as="h2" textAlign="center">Nooks</Header>
+              <Card.Group>
+                {this.props.nooks.map((nook, index) => <Nook key={index} nook={nook}/>)}
+              </Card.Group>
         </Container>
     );
   }
