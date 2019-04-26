@@ -8,13 +8,10 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListNook from '../pages/ListNook';
-<<<<<<< HEAD
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import ListStuff from '../pages/ListStuff';
 import Admin from '../pages/Admin';
-=======
 import ListNookAdmin from '../pages/ListNookAdmin';
->>>>>>> issue-34
 import AddNook from '../pages/AddNook';
 import EditNook from '../pages/EditNook';
 import NotFound from '../pages/NotFound';
@@ -40,15 +37,7 @@ class App extends React.Component {
               <ProtectedRoute path="/addnook" component={AddNook}/>
               <Route path="/nooks" component={ListNook}/>
               <ProtectedRoute path="/edit/:_id" component={EditNook}/>
-<<<<<<< HEAD
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
-              <Route path="/addnook" component={AddNook}/>
-              <ProtectedRoute path="/list" component={ListStuff}/>
-              <ProtectedRoute path="/edit/:_id" component={EditNook}/>
-              <Route path="/admin" component={Admin}/>
-=======
               <AdminProtectedRoute path="/admin" component={ListNookAdmin}/>
->>>>>>> issue-34
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>
