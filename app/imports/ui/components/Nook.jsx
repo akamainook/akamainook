@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, Image, Label, } from 'semantic-ui-react';
+import { Card, Image, Label } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 /** Renders a single card in the List Nook table. See pages/ListNook.jsx. */
 class Nook extends React.Component {
