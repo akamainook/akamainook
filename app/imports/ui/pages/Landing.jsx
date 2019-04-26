@@ -22,7 +22,7 @@ class Landing extends React.Component {
               <Grid.Row>
                 <Input id="searchBar" floated='right' icon='search' placeholder='Find your Nook'/>
               </Grid.Row>
-              <Grid.Row className="cards">
+              <Grid.Row className="landing cards">
                 <Grid fluid container columns={3}>
                   <Grid.Column>
                     <Card fluid>
