@@ -9,7 +9,7 @@ class Nook extends React.Component {
     return (
         <Card>
           <Card.Content>
-            <Image large="large" src={this.props.nook.images}/>
+            <Image size="large" src={this.props.nook.images}/>
           </Card.Content>
           <Card.Content>
             <Card.Header>{this.props.nook.nookName}</Card.Header>
