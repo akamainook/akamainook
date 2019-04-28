@@ -11,6 +11,7 @@ import ListNook from '../pages/ListNook';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import ListStuff from '../pages/ListStuff';
 import Admin from '../pages/Admin';
+import ListNookAdmin from '../pages/ListNookAdmin';
 import AddNook from '../pages/AddNook';
 import EditNook from '../pages/EditNook';
 import NotFound from '../pages/NotFound';
@@ -34,13 +35,9 @@ class App extends React.Component {
               <Route path="/profile" component={Profile}/>
               <Route path="/home" component={Home}/>
               <ProtectedRoute path="/addnook" component={AddNook}/>
-              <Route path="/listnook" component={ListNook}/>
+              <Route path="/nooks" component={ListNook}/>
               <ProtectedRoute path="/edit/:_id" component={EditNook}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
-              <Route path="/addnook" component={AddNook}/>
-              <ProtectedRoute path="/list" component={ListStuff}/>
-              <ProtectedRoute path="/edit/:_id" component={EditNook}/>
-              <Route path="/admin" component={Admin}/>
+              <AdminProtectedRoute path="/admin" component={ListNookAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>

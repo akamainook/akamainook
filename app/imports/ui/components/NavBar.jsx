@@ -11,43 +11,33 @@ class NavBar extends React.Component {
   render() {
     const menuStyle = { marginBottom: '10px' };
     return (
-        <Menu style={menuStyle} color='uhgreen' attached="top" borderless inverted>
-          <Container>
-            <Menu.Item as={NavLink} activeClassName="" exact to="/" position="left">
-              <Header inverted as='h1'>AkamaiNook</Header>
-            </Menu.Item>
-            {this.props.currentUser ? (
-                [<Menu.Item as={NavLink} activeClassName="active" exact to="/addnook"
-                            key='addnook' position={'right'}>
-                  Add Nooks
-                </Menu.Item>,
-                  <Menu.Item as={NavLink} activeClassName="active" exact to="/listnook"
-                             key='listnook'>
-                    List Nooks
-                  </Menu.Item>]
-            ) : ''}
-
-            {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/admin"
-                           key='admin'>Admin</Menu.Item>
-            ) : ''}
-            <Menu.Item position="right">
-              {this.props.currentUser === '' ? (
-                  <Dropdown text="Login" pointing="top right" icon={'user'}>
-                    <Dropdown.Menu>
-                      <Dropdown.Item icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
-                      <Dropdown.Item icon="add user" text="Sign Up" as={NavLink} exact to="/signup"/>
-                    </Dropdown.Menu>
-                  </Dropdown>
-              ) : (
-                  <Dropdown text={this.props.currentUser} pointing="top right" icon={'user'}>
-                    <Dropdown.Menu>
-                      <Dropdown.Item icon="sign out" text="Sign Out" as={NavLink} exact to="/signout"/>
-                    </Dropdown.Menu>
-                  </Dropdown>
-              )}
-            </Menu.Item>
-          </Container>
+        <Menu style={menuStyle} attached="top" borderless>
+          <Menu.Item as={NavLink} activeClassName="" exact to="/">
+            <Header as='h1'>AkamaiNook</Header>
+          </Menu.Item>
+          <Menu.Item as={NavLink} activeClassName="active" exact to="/nooks" key='nooks'>Nooks</Menu.Item>
+          {this.props.currentUser ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/addnook" key='addnook'>Add Nooks</Menu.Item>
+          ) : ''}
+          {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+              <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin'>Admin</Menu.Item>
+          ) : ''}
+          <Menu.Item position="right">
+            {this.props.currentUser === '' ? (
+                <Dropdown text="Login" pointing="top right" icon={'user'}>
+                  <Dropdown.Menu>
+                    <Dropdown.Item icon="user" text="Sign In" as={NavLink} exact to="/signin"/>
+                    <Dropdown.Item icon="add user" text="Sign Up" as={NavLink} exact to="/signup"/>
+                  </Dropdown.Menu>
+                </Dropdown>
+            ) : (
+                <Dropdown text={this.props.currentUser} pointing="top right" icon={'user'}>
+                  <Dropdown.Menu>
+                    <Dropdown.Item icon="sign out" text="Sign Out" as={NavLink} exact to="/signout"/>
+                  </Dropdown.Menu>
+                </Dropdown>
+            )}
+          </Menu.Item>
         </Menu>
     );
   }

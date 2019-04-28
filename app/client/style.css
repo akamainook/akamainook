@@ -38,7 +38,7 @@ body {
   text-align: center;
 }
 
-.cards {
+.landing.cards {
   width: 500px;
   display: inline-block;
   margin-right: 10px;
