@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, Grid, Button, List } from 'semantic-ui-react';
+import { Grid, List } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
@@ -16,8 +16,6 @@ class Footer extends React.Component {
                 <List.Item as={NavLink} activeClassName="active" exact to="/nooks" key='nooks'>Nooks</List.Item>
               </List>
             </Grid.Column>
-        <div className="footer-background">
-          <Grid container columns={2}>
             <Grid.Column>About Akamai Nook
               <hr/>
               <p>Akamai Nook is created by a team of college students who want
@@ -27,11 +25,6 @@ class Footer extends React.Component {
             </Grid.Column>
             <Grid.Column> Credits
               <hr/>
-              <Button as='a'
-                        href='https://github.com/akamainook' icon>
-                Our Github Page
-                <Icon huge="true" name='github square'/>
-              </Button>
               <List>
                 <List.Item>Background images:</List.Item>
                 <List.Item>www.pexels.com</List.Item>
