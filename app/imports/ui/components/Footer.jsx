@@ -16,6 +16,8 @@ class Footer extends React.Component {
                 <List.Item as={NavLink} activeClassName="active" exact to="/nooks" key='nooks'>Nooks</List.Item>
               </List>
             </Grid.Column>
+        <div className="footer-background">
+          <Grid container columns={2}>
             <Grid.Column>About Akamai Nook
               <hr/>
               <p>Akamai Nook is created by a team of college students who want

@@ -10,7 +10,7 @@ export default class Signup extends React.Component {
   /** Initialize state fields. */
   constructor(props) {
     super(props);
-    this.state = { email: '', password: '', error: '' };
+    this.state = { email: '', password: '', confirmPassword: '', error: '' };
     // Ensure that 'this' is bound to this component in these two functions.
     // https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,14 +24,19 @@ export default class Signup extends React.Component {
 
   /** Handle Signup submission using Meteor's account mechanism. */
   handleSubmit() {
-    const { email, password } = this.state;
-    Accounts.createUser({ email, username: email, password }, (err) => {
-      if (err) {
-        this.setState({ error: err.reason });
-      } else {
-        // browserHistory.push('/login');
-      }
-    });
+    const image = 'star.png';
+    const { email, password, confirmPassword } = this.state;
+    if (password !== confirmPassword) {
+      this.setState({ error: 'Passwords does not match' });
+    } else {
+      Accounts.createUser({ email, username: email, password, profile: { image: image } }, (err) => {
+        if (err) {
+          this.setState({ error: err.reason });
+        } else {
+          // browserHistory.push('/login');
+        }
+      });
+    }
   }
 
   /** Display the signup form. */
@@ -60,6 +65,14 @@ export default class Signup extends React.Component {
                       iconPosition="left"
                       name="password"
                       placeholder="Password"
+                      type="password"
+                      onChange={this.handleChange}
+                  />
+                  <Form.Input
+                      icon="lock"
+                      iconPosition="left"
+                      name="confirmPassword"
+                      placeholder="Confirm Password"
                       type="password"
                       onChange={this.handleChange}
                   />

@@ -3,11 +3,17 @@
     {
       "email": "notadmin@foo.com",
       "password": "notpassword",
-      "role": "admin"
+      "role": "admin",
+      "profile": {
+        "image": "boy.png"
+      }
     },
     {
       "email": "luke@foo.com",
-      "password": "changedme"
+      "password": "changedme",
+      "profile": {
+        "image": "cat.png"
+      }
     }
   ],
   "defaultNooks": [
@@ -121,7 +127,18 @@
         "Outdoor",
         "Scenic"
       ],
-      "approval": true
+      "approval": true,
+      "role": "admin",
+      "profile": {
+        "image": "boy.png"
+      }
+    },
+    {
+      "email": "luke@foo.com",
+      "password": "changedme",
+      "profile": {
+        "image": "cat.png"
+      }
     }
   ]
 }
