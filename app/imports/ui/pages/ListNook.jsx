@@ -17,8 +17,9 @@ class ListNook extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
+        <div className="nooksBackground">
         <Container>
-          <Header as="h2" textAlign="center">Nooks</Header>
+          <Header as="h1" className="title" textAlign="center">Find your Nook</Header>
           <Grid columns={2}>
             <Grid.Column>
               <Embed
@@ -32,7 +33,9 @@ class ListNook extends React.Component {
               </Card.Group>
             </Grid.Column>
           </Grid>
+          <p id="credit">Photo by Lisa Fotios from Pexels</p>
         </Container>
+        </div>
     );
   }
 }

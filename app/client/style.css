@@ -1,23 +1,56 @@
 body {
+  font-family: 'Montserrat', sans-serif;
   background-color: #024731;
   color: #C8C8C8 !important;
 }
 
+.title {
+  margin-top: 100px;
+  font-family: 'Montserrat', sans-serif !important;
+  color: white !important;
+}
+
 .footer-background {
+  font-family: 'Montserrat', sans-serif;
   background-color: #024731;
   color: #C8C8C8;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
+
+.navBar-background {
+  color: #C8C8C8;
+}
+
+.ui.borderless.top.menu {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #024731;
+  color: #C8C8C8;
+  padding-bottom: 15px;
+  padding-top: 5px;
+}
+
 .main-background {
   background-image: url("https://s3.amazonaws.com/thumbnails.thecrimson.com/photos/2017/12/06/194934_1326680.JPG.1500x1125_q95_crop-smart_upscale.jpg");
   background-size: cover;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
   height: 500px;
   margin-top: -20px;
 }
 
+.nooksBackground {
+  background-image: url("cafebackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.cards {
+  font-family: 'Montserrat', sans-serif;
+}
 
 .center-class {
   position: relative;
@@ -29,10 +62,12 @@ body {
   background-image: url("background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 20px;
 }
 
 #description {
   font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   margin-bottom: 75px;
   text-align: center;
