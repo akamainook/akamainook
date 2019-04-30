@@ -132,13 +132,6 @@
       "profile": {
         "image": "boy.png"
       }
-    },
-    {
-      "email": "luke@foo.com",
-      "password": "changedme",
-      "profile": {
-        "image": "cat.png"
-      }
     }
   ]
 }
