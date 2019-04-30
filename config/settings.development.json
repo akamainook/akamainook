@@ -37,40 +37,36 @@
       "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/"
     },
     {
-      "nookName": "Hamilton Library (2nd Floor - Main Building) Group Study Rooms",
-      "address": "2550 McCarthy Mall",
+      "nookName": "Art Building",
+      "address": "2535 McCarthy Mall",
       "images": [
-        "http://manoa.hawaii.edu/library/wp-content/uploads/2017/10/groupstudy.jpg",
-        "http://manoa.hawaii.edu/library/wp-content/uploads/floorplans/Hamilton-2nd-Floor.png",
-        "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/university-of-hawaii-manoa-7037e8e9.jpg"
+        "app/public/artbuilding.jpg"
       ],
-      "description": "There are six group study rooms on the 2nd Floor of Hamilton Library (Main) that can be reserved by University of Hawaii students, faculty, and staff.",
-      "startHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
-      "endHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
+      "description": "Not too far away from most classes on campus, has small outdoor tables. ",
+      "startHour": "All Hours",
+      "endHour": "All Hours",
       "owner": "john@foo.com",
       "webLink": "http://manoa.hawaii.edu/library/services/study-spaces/group-study-rooms/",
       "tags": [
-        "Quiet",
-        "Internet",
-        "A/C",
-        "Indoors"
-        ]
+        "Outdoor",
+        "Shade",
+        "Food"
+      ]
     },
     {
-      "nookName": "Learning Emporium",
-      "address": "Bilger Addition, Room 209",
+      "nookName": "Paradise Palms Cafe",
+      "address": "2560 McCarthy Mall, Honolulu, HI 96822",
       "images": [
-        "learningemporium_files/stacks-image-b6bea4c-1200x904.jpg"
+        "app/public/artbuilding.jpg"
       ],
-      "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
-      "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
-      "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+      "description": "A food court area that serves coffee and food. Also has a microwave.",
+      "startHour": "8:00AM",
+      "endHour": "5:00PM",
       "owner": "luke@foo.com",
-      "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
+      "webLink": "",
       "tags": [
-        "Loud",
-        "Resources",
-        "Internet",
+        "Food",
+        "WiFi",
         "Indoors"
       ],
       "approval": true
@@ -82,22 +78,21 @@
         "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/sinclair002.jpg"
       ],
       "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
-      "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
-      "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+      "startHour": "All Hours",
+      "endHour": "All Hours",
       "owner": "luke@foo.com",
       "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
       "tags": [
         "Quiet",
-        "Food & Drink Friendly",
-        "Long Hours",
-        "Internet",
+        "Food",
+        "WiFi",
         "Indoors"
       ],
       "approval": true
     },
     {
       "nookName": "Campus Center",
-      "address": " 2465 Campus Rd",
+      "address": "2465 Campus Rd",
       "images": [
         "rec2.jpg"
       ],
@@ -105,11 +100,12 @@
       "startHour": "24/7",
       "endHour": "24/7",
       "owner": "luke@foo.com",
+      "webLink": "",
       "tags": [
-        "Populated",
+        "Busy",
         "Outdoor",
-        "Ample restrooms",
-        "Restaurants nearby"
+        "Restrooms",
+        "WiFi"
       ],
       "approval": true
     },
@@ -120,25 +116,88 @@
         "rec3.jpg"
       ],
       "description": "Enjoy the outdoor breeze by studying at the beautiful quad.",
-      "startHour": "24/7",
-      "endHour": "24/7",
+      "startHour": "All Hours",
+      "endHour": "All Hours",
       "owner": "luke@foo.com",
+      "webLink": "",
       "tags": [
         "Outdoor",
-        "Scenic"
+        "Scenic",
+        "Quiet"
       ],
-      "approval": true,
-      "role": "admin",
-      "profile": {
-        "image": "boy.png"
-      }
+      "approval": true
     },
     {
-      "email": "luke@foo.com",
-      "password": "changedme",
-      "profile": {
-        "image": "cat.png"
-      }
+      "nookName": "Japanese Garden",
+      "address": "At the East West Center.",
+      "images": [
+        "japanesegarden.jpg"
+      ],
+      "description": "Beautiful and scenic Japanese garden to ease your mind.",
+      "startHour": "All Hours",
+      "endHour": "All Hours",
+      "owner": "luke@foo.com",
+      "webLink": "",
+      "tags": [
+        "Outdoor",
+        "Quiet",
+        "Scenic"
+      ],
+      "approval": true
+    },
+    {
+      "nookName": "The Nook Neighborhood Bistro",
+      "address": "1035 University Ave.",
+      "images": [
+        "japanesegarden.jpg"
+      ],
+      "description": "An actual nook. A cute cafe to eat and study.",
+      "startHour": "8:00AM",
+      "endHour": "2:00PM",
+      "owner": "luke@foo.com",
+      "webLink": "http://www.thenookhonolulu.com/",
+      "tags": [
+        "Indoor",
+        "Food",
+        "A/C"
+      ],
+      "approval": true
+    },
+    {
+      "nookName": "McDonald's",
+      "address": "2121 S King St",
+      "images": [
+        "mcdonalds.jpg"
+      ],
+      "description": "Ample parking and great food for great price.",
+      "startHour": "All Hours",
+      "endHour": "All Hours",
+      "owner": "luke@foo.com",
+      "webLink": "www.mcdonalds.com",
+      "tags": [
+        "Indoor",
+        "Food",
+        "A/C"
+      ],
+      "approval": true
+    },
+    {
+      "nookName": "William S Richardson Law Library",
+      "address": "2525 Dole Street",
+      "images": [
+        "lawlibrary.jpg"
+      ],
+      "description": "https://library.law.hawaii.edu/",
+      "startHour": "8:00AM",
+      "endHour": "9:00PM",
+      "owner": "luke@foo.com",
+      "webLink": "https://library.law.hawaii.edu/",
+      "tags": [
+        "Indoor",
+        "WiFi",
+        "A/C"
+      ],
+      "approval": true
     }
   ]
 }
