@@ -1,13 +1,13 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card, Grid, Embed } from 'semantic-ui-react';
+import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { Nooks } from '/imports/api/nook/nook';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import Nook from '/imports/ui/components/Nook';
+import NookAdmin from '/imports/ui/components/NookAdmin';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ListNook extends React.Component {
+class ListNookUser extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -17,31 +17,18 @@ class ListNook extends React.Component {
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
-        <div className="nooksBackground">
-          <Container>
-            <Header as="h1" className="title" textAlign="center">Find your Nook</Header>
-            <Grid rows={2}>
-              <Grid.Row>
-                <Embed
-                    defaultActive='true'
-                    url='https://www.google.com/maps/d/u/0/embed?mid=18hNvc3Mp7H4t8UF6Ajay0mIo5FUtfuiH'
-                />
-              </Grid.Row>
-              <Grid.Row>
-                <Card.Group>
-                  {this.props.nooks.map((nook, index) => <Nook key={index} nook={nook}/>)}
-                </Card.Group>
-              </Grid.Row>
-            </Grid>
-            <p id="credit">Photo by Lisa Fotios from Pexels</p>
-          </Container>
-        </div>
+        <Container>
+          <Header as="h2" textAlign="center">Listed Nooks</Header>
+          <Card.Group>
+            {this.props.nooks.map((nook, index) => <NookAdmin key={index} nook={nook}/>)}
+          </Card.Group>
+        </Container>
     );
   }
 }
 
 /** Require an array of Stuff documents in the props. */
-ListNook.propTypes = {
+ListNookUser.propTypes = {
   nooks: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
@@ -49,9 +36,9 @@ ListNook.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe('Nooks');
+  const subscription = Meteor.subscribe('MyNooks');
   return {
     nooks: Nooks.find({}).fetch(),
     ready: (subscription.ready()),
   };
-})(ListNook);
+})(ListNookUser);

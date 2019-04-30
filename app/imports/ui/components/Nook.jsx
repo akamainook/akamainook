@@ -20,9 +20,9 @@ class Nook extends React.Component {
             </Card.Description>
           </Card.Content>
           <Card.Content>
-            <Label as='a' tag>
-              {this.props.nook.tags}
-            </Label>
+            function myFunction(value, index, array) {
+            return value * 2;
+          };
           </Card.Content>
         </Card>
     );

@@ -1,10 +1,32 @@
 import React from 'react';
-import { Card, Image, Label } from 'semantic-ui-react';
+import { Card, Image, Label, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
+import { Bert } from 'meteor/themeteorchef:bert';
+import { Nooks } from '../../api/nook/nook';
 
 /** Renders a single card in the List Nook table. See pages/ListNook.jsx. */
 class NookAdmin extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    if (confirm('Are you sure you want to delete this nook?')) {
+      Nooks.remove(this.props.nook._id, this.deleteCallBack);
+    }
+  }
+
+  deleteCallback(error) {
+    if (error) {
+      Bert.alert({type: 'danger', message: 'Delete failed' });
+    }
+    else {
+      Bert.alert({type: 'success', message: 'Delete successful'});
+    }
+  }
+
   render() {
     return (
         <Card>
@@ -24,6 +46,9 @@ class NookAdmin extends React.Component {
           </Card.Content>
           <Card.Content extra>
             <Link to={`/edit/${this.props.nook._id}`}>Edit</Link>
+          </Card.Content>
+          <Card.Content extra>
+            <Button onClick={this.onClick}>Delete</Button>
           </Card.Content>
         </Card>
     );

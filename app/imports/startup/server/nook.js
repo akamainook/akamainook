@@ -21,6 +21,15 @@ Meteor.publish('Nooks', function publish() {
     return Nooks.find();
 });
 
+/** This subscription publishes only the documents associated with the logged in user */
+Meteor.publish('MyNooks', function publish() {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Nooks.find({ owner: username });
+  }
+  return this.ready();
+});
+
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
 Meteor.publish('NookAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
