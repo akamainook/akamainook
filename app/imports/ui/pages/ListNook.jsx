@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card, Grid } from 'semantic-ui-react';
+import { Container, Header, Loader, Card, Grid, Embed } from 'semantic-ui-react';
 import { Nooks } from '/imports/api/nook/nook';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -19,9 +19,19 @@ class ListNook extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center">Nooks</Header>
+          <Grid columns={2}>
+            <Grid.Column>
+              <Embed
+                  defaultActive='true'
+                  url='https://www.google.com/maps/d/u/0/embed?mid=18hNvc3Mp7H4t8UF6Ajay0mIo5FUtfuiH'
+              />
+            </Grid.Column>
+            <Grid.Column>
               <Card.Group>
                 {this.props.nooks.map((nook, index) => <Nook key={index} nook={nook}/>)}
               </Card.Group>
+            </Grid.Column>
+          </Grid>
         </Container>
     );
   }
