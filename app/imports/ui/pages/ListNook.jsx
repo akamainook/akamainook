@@ -33,7 +33,9 @@ class ListNook extends React.Component {
               </Card.Group>
             </Grid.Column>
           </Grid>
-          <p id="credit">Photo by Lisa Fotios from Pexels</p>
+          <p id="credit">
+            <a className="linkColor" src="http://manoa.hawaii.edu/library/services/
+            study-space/hamilton-library-1st-floor-main-building-reference-area/">View of the Mānoa campus from Mt Tantalus</a></p>
         </Container>
         </div>
     );

@@ -111,7 +111,8 @@ class Landing extends React.Component {
               </Grid.Row>
             </Grid>
           </Container>
-          <p id="credit">Photo by Ricardo Esquivel from Pexels</p>
+          <p id="credit"><a className="linkColor" src="http://manoa.hawaii.edu/ctahr/nutritionPhD/
+                            college-university-of-hawaii/">Hamilton Library 1st Floor</a></p>
         </div>
     );
   }
