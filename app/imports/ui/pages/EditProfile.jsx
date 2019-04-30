@@ -14,7 +14,9 @@ export default class EditProfile extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = { oldPassword: '', newPassword: '', confirmPassword: '' };
     this.handleChange = this.handleChange.bind(this);
+    this.handleChange2 = this.handleChange2.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSubmit2 = this.handleSubmit2.bind(this);
   }
@@ -31,7 +33,9 @@ export default class EditProfile extends React.Component {
         Bert.alert({ type: 'success', message: 'Update succeeded' })));
   }
 
-  handleChange2 = (e, { value }) => this.setState({ value });
+  handleChange2 = (e, { name, value }) => {
+    this.setState({ [name]: value });
+  };
 
   /** Handles submit of the password change form */
     handleSubmit2() {
@@ -43,52 +47,8 @@ export default class EditProfile extends React.Component {
       }
     }
 
-  /*
-
-    /!** Initialize component state with properties for login and redirection. *!/
-    constructor(props) {
-      super(props);
-      this.state = { email: '', password: '', error: '', redirectToReferer: false };
-      // Ensure that 'this' is bound to this component in these two functions.
-      // https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.handleChange = this.handleChange.bind(this);
-    }
-
-    /!** Update the form controls each time the user interacts with them. *!/
-    handleChange(e, { name, value }) {
-      this.setState({ [name]: value });
-    }
-
-    /!** Handle Signin submission using Meteor's account mechanism. *!/
-    handleSubmit() {
-      const { oldPassword, newPassword, confirmPassword } = this.state;
-      Meteor.changePassword(oldPassword, newPassword, (err) => {
-        if (err) {
-          this.setState({ error: err.reason });
-        } else if (oldPassword !== confirmPassword) {
-          this.setState({ error: err.reason });
-        } else {
-          this.setState({ error: '', redirectToReferer: true });
-        }
-      });
-    }
-
-    validateForm() {
-      return (
-          this.state.oldPassword.length > 0 &&
-              this.state.password.length > 0 &&
-              this.state.password === this.state.confirmPassword
-      );
-    }
-  */
-
   /** Display the Edit profile form. */
   render() {
-    /*    // if correct authentication, redirect to page instead of login screen
-        if (this.state.redirectToReferer) {
-          return <Redirect to={'/profile'}/>;
-        } */
     return (
         <Container>
           <Grid textAlign="center" verticalAlign="middle" centered>
