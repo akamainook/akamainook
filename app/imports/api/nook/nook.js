@@ -7,13 +7,14 @@ const Nooks = new Mongo.Collection('Nooks');
 
 /** Create a schema to constrain the structure of documents associated with this collection. */
 const NookSchema = new SimpleSchema({
-  nookName: String,
-  address: String,
+  nookName: { type: String, required: true },
+  address: { type: String, required: true },
   images: { type: Array },
   'images.$': { type: String },
-  description: String,
+  description: { type: String, required: true },
   startHour: {
     type: String,
+    required: true,
     allowedValues: [
       '12:00AM', '12:30AM', '1:00AM', '1:30AM', '2:00AM', '2:30AM', '3:30AM',
       '4:30AM', '5:00AM', '5:30AM', '6:00AM', '6:30AM', '7:00AM', '7:30AM', '8:00AM', '8:30AM',
@@ -25,6 +26,7 @@ const NookSchema = new SimpleSchema({
   },
   endHour: {
     type: String,
+    required: true,
     allowedValues: [
       '12:00AM', '12:30AM', '1:00AM', '1:30AM', '2:00AM', '2:30AM', '3:30AM',
       '4:30AM', '5:00AM', '5:30AM', '6:00AM', '6:30AM', '7:00AM', '7:30AM', '8:00AM', '8:30AM',
@@ -32,14 +34,14 @@ const NookSchema = new SimpleSchema({
       '1:00PM', '1:30PM', '2:00PM', '2:30PM', '3:30PM', '4:30PM', '5:00PM', '5:30PM', '6:00PM',
       '6:30PM', '7:00PM', '7:30PM', '8:00PM', '8:30PM', '9:00PM', '9:30PM', '10:00PM', '10:30PM',
       '11:00PM', '11:30PM'],
-    defaultValue: '8:00AM',
+    defaultValue: '8:00PM',
   },
-  owner: String,
+  owner: { type: String, required: true },
   webLink: String,
-  tags: { type: Array },
+  tags: { type: Array, require: true },
   'tags.$': { type: String },
   approved: Boolean,
-}, { tracker: Tracker });
+}, { requiredByDefault: false }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
 Nooks.attachSchema(NookSchema);
