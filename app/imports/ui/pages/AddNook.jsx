@@ -57,7 +57,7 @@ class AddNook extends React.Component {
                 <SelectField name='endHour'/>
                 <TextField name='webLink'/>
                 <LongTextField name='description'/>
-                <TextField name='tags'/>
+                <SelectField fieldType === Array checkboxes={true} name='tags'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' value='fakeuser@foo.com'/>
