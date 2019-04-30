@@ -6,7 +6,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import NookAdmin from '/imports/ui/components/NookAdmin';
 
-/** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+/** Renders a table containing all of the Nook documents. Use <StuffItem> to render each row. */
 class ListNookAdmin extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
@@ -27,7 +27,7 @@ class ListNookAdmin extends React.Component {
   }
 }
 
-/** Require an array of Stuff documents in the props. */
+/** Require an array of Nook documents in the props. */
 ListNookAdmin.propTypes = {
   nooks: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
@@ -35,7 +35,7 @@ ListNookAdmin.propTypes = {
 
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
-  // Get access to Stuff documents.
+  // Get access to Nook documents.
   const subscription = Meteor.subscribe('NookAdmin');
   return {
     nooks: Nooks.find({}).fetch(),

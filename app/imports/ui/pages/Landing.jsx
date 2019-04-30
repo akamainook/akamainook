@@ -35,7 +35,7 @@ class Landing extends React.Component {
               <Grid.Row className="cards">
                 <Grid fluid container columns={3}>
                   <Grid.Column>
-                    <Card fluid>
+                    <Card>
                       <Image src="rec1.jpg"/>
                       <Card.Content>
                         <Card.Header>ICSpace</Card.Header>
@@ -61,7 +61,7 @@ class Landing extends React.Component {
                     </Card>
                   </Grid.Column>
                   <Grid.Column>
-                    <Card fluid>
+                    <Card>
                       <Image src="rec2.jpg" height="170px"/>
                       <Card.Content>
                         <Card.Header>Campus Center</Card.Header>
@@ -88,7 +88,7 @@ class Landing extends React.Component {
                     </Card>
                   </Grid.Column>
                   <Grid.Column>
-                    <Card fluid>
+                    <Card>
                       <Image src="rec3.jpg" height="170px"/>
                       <Card.Content>
                         <Card.Header>The Quad</Card.Header>

@@ -4,6 +4,18 @@ body {
   color: #C8C8C8 !important;
 }
 
+.header {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .title {
   margin-top: 100px;
   font-family: 'Montserrat', sans-serif !important;
@@ -80,14 +92,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-#description {
-  font-size: 30px;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
-  margin-bottom: 75px;
-  text-align: center;
-}
-
 .landing.cards {
   width: 500px;
   display: inline-block;
@@ -102,6 +106,14 @@ body {
   text-align-all: center;
   font-size: 70px;
   color: ghostwhite;
+}
+
+#description {
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  margin-bottom: 75px;
+  text-align: center;
 }
 
 #akamai {
@@ -130,16 +142,4 @@ body {
   align-content: center;
   text-align: center;
   margin-left: 35px;
-}
-
-.header {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.form {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.button {
-  font-family: 'Montserrat', sans-serif;
 }

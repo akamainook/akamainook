@@ -59,7 +59,7 @@ class EditNook extends React.Component {
   }
 }
 
-/** Require the presence of a Stuff document in the props object. Uniforms adds 'model' to the props, which we use. */
+/** Require the presence of a Nook document in the props object. Uniforms adds 'model' to the props, which we use. */
 EditNook.propTypes = {
   doc: PropTypes.object,
   model: PropTypes.object,
