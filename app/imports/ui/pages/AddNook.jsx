@@ -4,7 +4,6 @@ import { Grid, Segment, Header } from 'semantic-ui-react';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
 import LongTextField from 'uniforms-semantic/LongTextField';
-import NumField from 'uniforms-semantic/NumField';
 import SelectField from 'uniforms-semantic/SelectField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import HiddenField from 'uniforms-semantic/HiddenField';
@@ -37,7 +36,8 @@ class AddNook extends React.Component {
   submit(data) {
     const { nookName, address, images, startHour, endHour, webLink, description, tags } = data;
     const owner = Meteor.user().username;
-    Nooks.insert({ nookName, address, images, startHour, endHour, owner, webLink, description, tags }, this.insertCallback);
+    Nooks.insert({
+      nookName, address, images, startHour, endHour, owner, webLink, description, tags }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */

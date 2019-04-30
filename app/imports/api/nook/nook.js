@@ -38,7 +38,7 @@ const NookSchema = new SimpleSchema({
   },
   owner: { type: String, required: true },
   webLink: String,
-  tags: { type: Array, require: true },
+  tags: { type: Array, required: true },
   'tags.$': { type: String },
   approved: Boolean,
 }, { requiredByDefault: false }, { tracker: Tracker });
