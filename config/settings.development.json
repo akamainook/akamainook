@@ -28,10 +28,8 @@
       "endHour": "Anytime",
       "owner": "luke@foo.com",
       "tags": [
-        "Moderate Volume",
-        "Internet",
-        "A/C",
-        "Resources"
+        "Wifi",
+        "AC"
       ],
       "approval": true,
       "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/"
@@ -42,6 +40,7 @@
       "images": [
         "app/public/artbuilding.jpg"
       ],
+<<<<<<< HEAD
       "description": "Not too far away from most classes on campus, has small outdoor tables. ",
       "startHour": "All Hours",
       "endHour": "All Hours",
@@ -52,6 +51,17 @@
         "Shade",
         "Food"
       ]
+=======
+      "description": "There are six group study rooms on the 2nd Floor of Hamilton Library (Main) that can be reserved by University of Hawaii students, faculty, and staff.",
+      "startHour": "9:00AM",
+      "endHour": "10:00PM",
+      "owner": "john@foo.com",
+      "webLink": "http://manoa.hawaii.edu/library/services/study-spaces/group-study-rooms/",
+      "tags": [
+        "Wifi",
+        "AC"
+        ]
+>>>>>>> issue-42
     },
     {
       "nookName": "Paradise Palms Cafe",
@@ -59,15 +69,24 @@
       "images": [
         "app/public/artbuilding.jpg"
       ],
+<<<<<<< HEAD
       "description": "A food court area that serves coffee and food. Also has a microwave.",
+=======
+      "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
+>>>>>>> issue-42
       "startHour": "8:00AM",
       "endHour": "5:00PM",
       "owner": "luke@foo.com",
       "webLink": "",
       "tags": [
+<<<<<<< HEAD
         "Food",
         "WiFi",
         "Indoors"
+=======
+        "Wifi",
+        "AC"
+>>>>>>> issue-42
       ],
       "approval": true
     },
@@ -78,6 +97,7 @@
         "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/sinclair002.jpg"
       ],
       "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
+<<<<<<< HEAD
       "startHour": "All Hours",
       "endHour": "All Hours",
       "owner": "luke@foo.com",
@@ -87,6 +107,15 @@
         "Food",
         "WiFi",
         "Indoors"
+=======
+      "startHour": "Anytime",
+      "endHour": "Anytime",
+      "owner": "luke@foo.com",
+      "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
+      "tags": [
+        "Wifi",
+        "AC"
+>>>>>>> issue-42
       ],
       "approval": true
     },
@@ -97,15 +126,20 @@
         "rec2.jpg"
       ],
       "description": "A populated place conveniently located near food and beverage stores.",
-      "startHour": "24/7",
-      "endHour": "24/7",
+      "startHour": "Anytime",
+      "endHour": "Anytime",
       "owner": "luke@foo.com",
       "webLink": "",
       "tags": [
+<<<<<<< HEAD
         "Busy",
         "Outdoor",
         "Restrooms",
         "WiFi"
+=======
+        "Wifi",
+        "AC"
+>>>>>>> issue-42
       ],
       "approval": true
     },
@@ -116,11 +150,17 @@
         "rec3.jpg"
       ],
       "description": "Enjoy the outdoor breeze by studying at the beautiful quad.",
+<<<<<<< HEAD
       "startHour": "All Hours",
       "endHour": "All Hours",
+=======
+      "startHour": "Anytime",
+      "endHour": "Anytime",
+>>>>>>> issue-42
       "owner": "luke@foo.com",
       "webLink": "",
       "tags": [
+<<<<<<< HEAD
         "Outdoor",
         "Scenic",
         "Quiet"
@@ -142,6 +182,9 @@
         "Outdoor",
         "Quiet",
         "Scenic"
+=======
+        "Outdoor"
+>>>>>>> issue-42
       ],
       "approval": true
     },

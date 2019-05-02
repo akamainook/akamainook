@@ -11,7 +11,11 @@ function addData(data) {
 /** Initialize the collection if empty. */
 if (Nooks.find().count() === 0) {
   if (Meteor.settings.defaultNooks) {
+<<<<<<< HEAD
     console.log('Creating default data.');
+=======
+    console.log('Creating default nooks.');
+>>>>>>> issue-42
     Meteor.settings.defaultNooks.map(data => addData(data));
   }
 }
@@ -19,6 +23,15 @@ if (Nooks.find().count() === 0) {
 /** This subscription publishes only the documents associated with anyone */
 Meteor.publish('Nooks', function publish() {
     return Nooks.find();
+});
+
+/** This subscription publishes only the documents associated with the logged in user */
+Meteor.publish('MyNooks', function publish() {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Nooks.find({ owner: username });
+  }
+  return this.ready();
 });
 
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
