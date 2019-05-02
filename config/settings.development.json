@@ -28,10 +28,8 @@
       "endHour": "Anytime",
       "owner": "luke@foo.com",
       "tags": [
-        "Moderate Volume",
-        "Internet",
-        "A/C",
-        "Resources"
+        "Wifi",
+        "AC"
       ],
       "approval": true,
       "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/"
@@ -67,7 +65,8 @@
       "tags": [
         "Food",
         "WiFi",
-        "Indoors"
+        "Indoors",
+        "AC"
       ],
       "approval": true
     },
@@ -77,9 +76,9 @@
       "images": [
         "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/sinclair002.jpg"
       ],
-      "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
-      "startHour": "All Hours",
-      "endHour": "All Hours",
+      "description": "A popular destination for UH students, faculty, and staff where they can find music books, magazines, sheet music, videos, CDs, DVDs, audiocassettes, phonodiscs, other media, and course reserve services.  There is wireless access on every floor with ample and varied study space available throughout the building.",
+      "startHour": "Anytime",
+      "endHour": "Anytime",
       "owner": "luke@foo.com",
       "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
       "tags": [
@@ -97,15 +96,16 @@
         "rec2.jpg"
       ],
       "description": "A populated place conveniently located near food and beverage stores.",
-      "startHour": "All Hours",
-      "endHour": "All Hours",
+      "startHour": "Anytime",
+      "endHour": "Anytime",
       "owner": "luke@foo.com",
       "webLink": "",
       "tags": [
         "Busy",
         "Outdoor",
         "Restrooms",
-        "WiFi"
+        "Wifi",
+        "AC"
       ],
       "approval": true
     },
@@ -116,8 +116,8 @@
         "rec3.jpg"
       ],
       "description": "Enjoy the outdoor breeze by studying at the beautiful quad.",
-      "startHour": "All Hours",
-      "endHour": "All Hours",
+      "startHour": "Anytime",
+      "endHour": "Anytime",
       "owner": "luke@foo.com",
       "webLink": "",
       "tags": [
@@ -141,7 +141,8 @@
       "tags": [
         "Outdoor",
         "Quiet",
-        "Scenic"
+        "Scenic",
+        "Outdoor"
       ],
       "approval": true
     },
@@ -170,8 +171,8 @@
         "mcdonalds.jpg"
       ],
       "description": "Ample parking and great food for great price.",
-      "startHour": "All Hours",
-      "endHour": "All Hours",
+      "startHour": "Anytime",
+      "endHour": "Anytime",
       "owner": "luke@foo.com",
       "webLink": "www.mcdonalds.com",
       "tags": [

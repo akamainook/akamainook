@@ -18,6 +18,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import Profile from '../pages/Profile';
 import EditProfile from '../pages/EditProfile';
+import ListNookUser from '../pages/ListNookUser';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
               <Route path="/profile" component={Profile}/>
               <Route path="/home" component={Home}/>
               <ProtectedRoute path="/addnook" component={AddNook}/>
+              <ProtectedRoute path="/mynooks" component={ListNookUser}/>
               <Route path="/nooks" component={ListNook}/>
               <ProtectedRoute path="/edit/:_id" component={EditNook}/>
               <AdminProtectedRoute path="/admin" component={ListNookAdmin}/>
