@@ -143,11 +143,6 @@
         "Quiet",
         "Scenic"
       ],
-      "approval": true,
-      "role": "admin",
-      "profile": {
-        "image": "boy.png"
-      }
       "approval": true
     },
     {
