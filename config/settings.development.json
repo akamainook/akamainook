@@ -97,8 +97,8 @@
         "rec2.jpg"
       ],
       "description": "A populated place conveniently located near food and beverage stores.",
-      "startHour": "24/7",
-      "endHour": "24/7",
+      "startHour": "All Hours",
+      "endHour": "All Hours",
       "owner": "luke@foo.com",
       "webLink": "",
       "tags": [
