@@ -29,7 +29,9 @@
       "owner": "luke@foo.com",
       "tags": [
         "Wifi",
-        "AC"
+        "AC",
+        "Food",
+        "Drink"
       ],
       "approval": true,
       "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/"
@@ -64,6 +66,8 @@
       "webLink": "",
       "tags": [
         "Food",
+        "Drink",
+        "Coffee",
         "WiFi",
         "Indoors",
         "AC"
@@ -84,6 +88,7 @@
       "tags": [
         "Quiet",
         "Food",
+        "Drink",
         "WiFi",
         "Indoors"
       ],
@@ -101,9 +106,10 @@
       "owner": "luke@foo.com",
       "webLink": "",
       "tags": [
-        "Busy",
+        "Food",
+        "Drink",
+        "Coffee",
         "Outdoor",
-        "Restrooms",
         "Wifi"
       ],
       "approval": true
@@ -150,7 +156,7 @@
       "nookName": "The Nook Neighborhood Bistro",
       "address": "1035 University Ave.",
       "images": [
-        "japanesegarden.jpg"
+        "nookBistro.jpg"
       ],
       "description": "An actual nook. A cute cafe to eat and study.",
       "startHour": "8:00AM",
@@ -160,7 +166,9 @@
       "tags": [
         "Indoor",
         "Food",
-        "A/C"
+        "AC",
+        "Coffee",
+        "Parking"
       ],
       "approval": true
     },
@@ -178,7 +186,8 @@
       "tags": [
         "Indoor",
         "Food",
-        "A/C"
+        "Drink",
+        "AC"
       ],
       "approval": true
     },
@@ -196,7 +205,10 @@
       "tags": [
         "Indoor",
         "WiFi",
-        "A/C"
+        "AC",
+        "Quiet",
+        "Parking",
+        "Library"
       ],
       "approval": true
     }
