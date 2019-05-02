@@ -104,8 +104,7 @@
         "Busy",
         "Outdoor",
         "Restrooms",
-        "Wifi",
-        "AC"
+        "Wifi"
       ],
       "approval": true
     },
@@ -142,7 +141,8 @@
         "Outdoor",
         "Quiet",
         "Scenic",
-        "Outdoor"
+        "Outdoor",
+        "Scenic"
       ],
       "approval": true
     },

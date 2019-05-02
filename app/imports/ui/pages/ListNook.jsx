@@ -18,27 +18,6 @@ class ListNook extends React.Component {
   renderPage() {
     return (
         <div className="nooksBackground">
-<<<<<<< HEAD
-        <Container>
-          <Header as="h1" className="title" textAlign="center">Find your Nook</Header>
-          <Grid columns={2}>
-            <Grid.Column>
-              <Embed
-                  defaultActive='true'
-                  url='https://www.google.com/maps/d/u/0/embed?mid=18hNvc3Mp7H4t8UF6Ajay0mIo5FUtfuiH'
-              />
-            </Grid.Column>
-            <Grid.Column>
-              <Card.Group>
-                {this.props.nooks.map((nook, index) => <Nook key={index} nook={nook}/>)}
-              </Card.Group>
-            </Grid.Column>
-          </Grid>
-          <p id="credit">
-            <a className="linkColor" src="http://manoa.hawaii.edu/library/services/
-            study-space/hamilton-library-1st-floor-main-building-reference-area/">View of the Mānoa campus from Mt Tantalus</a></p>
-        </Container>
-=======
           <Container>
             <Header as="h1" className="title" textAlign="center">Find your Nook</Header>
             <Grid centered rows={2}>
@@ -58,7 +37,6 @@ class ListNook extends React.Component {
             </Grid>
             <p id="credit">Photo by Lisa Fotios from Pexels</p>
           </Container>
->>>>>>> issue-42
         </div>
     );
   }
