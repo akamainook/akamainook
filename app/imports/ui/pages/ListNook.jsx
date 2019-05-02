@@ -20,15 +20,17 @@ class ListNook extends React.Component {
         <div className="nooksBackground">
           <Container>
             <Header as="h1" className="title" textAlign="center">Find your Nook</Header>
-            <Grid rows={2}>
+            <Grid centered rows={2}>
               <Grid.Row>
-                <Embed
-                    defaultActive='true'
-                    url='https://www.google.com/maps/d/u/0/embed?mid=18hNvc3Mp7H4t8UF6Ajay0mIo5FUtfuiH'
-                />
+                <Container>
+                  <Embed
+                      defaultActive='true'
+                      url='https://www.google.com/maps/d/u/0/embed?mid=18hNvc3Mp7H4t8UF6Ajay0mIo5FUtfuiH'
+                  />
+                </Container>
               </Grid.Row>
               <Grid.Row>
-                <Card.Group>
+                <Card.Group centered>
                   {this.props.nooks.map((nook, index) => <Nook key={index} nook={nook}/>)}
                 </Card.Group>
               </Grid.Row>

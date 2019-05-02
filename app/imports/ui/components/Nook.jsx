@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image, Label } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
@@ -20,9 +20,7 @@ class Nook extends React.Component {
             </Card.Description>
           </Card.Content>
           <Card.Content>
-            function myFunction(value, index, array) {
-            return value * 2;
-          };
+            {this.props.nook.tags.map((tag, index) => <tags key={index} tag={tag}/>)}
           </Card.Content>
         </Card>
     );
