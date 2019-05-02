@@ -24,7 +24,7 @@ class ListNook extends React.Component {
               <Grid.Row>
                 <Container>
                   <Embed
-                      defaultActive='true'
+                      defaultActive={true}
                       url='https://www.google.com/maps/d/u/0/embed?mid=18hNvc3Mp7H4t8UF6Ajay0mIo5FUtfuiH'
                   />
                 </Container>
