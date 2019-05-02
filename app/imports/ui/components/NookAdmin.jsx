@@ -20,14 +20,17 @@ class NookAdmin extends React.Component {
 
   deleteCallback(error) {
     if (error) {
-      Bert.alert({type: 'danger', message: 'Delete failed' });
+      Bert.alert({ type: 'danger', message: 'Delete failed' });
     }
     else {
-      Bert.alert({type: 'success', message: 'Delete successful'});
+      Bert.alert({ type: 'success', message: 'Delete successful' });
     }
   }
 
   render() {
+    const tagArray = this.props.nook.tags.map(function (tag, i) {
+      return <Label key={i}>{tag}</Label>;
+    });
     return (
         <Card>
           <Card.Content>
@@ -40,9 +43,9 @@ class NookAdmin extends React.Component {
             <Card.Description>
               {this.props.nook.description}
             </Card.Description>
-            <Label as='a' tag>
-              {this.props.nook.tags}
-            </Label>
+          </Card.Content>
+          <Card.Content>
+            {tagArray}
           </Card.Content>
           <Card.Content extra>
             <Link to={`/edit/${this.props.nook._id}`}>Edit</Link>

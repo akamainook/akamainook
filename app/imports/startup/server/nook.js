@@ -12,7 +12,7 @@ function addData(data) {
 if (Nooks.find().count() === 0) {
   if (Meteor.settings.defaultNooks) {
     console.log('Creating default nooks.');
-    Meteor.settings.defaultNooks.map(data => addData(data));
+    Meteor.settings.defaultData.map(data => addData(data));
   }
 }
 

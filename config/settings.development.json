@@ -25,13 +25,10 @@
       ],
       "description": "POST 318B is an interactive classroom intended for the use of the ICS Community, which is defined as:  ICS undergraduate majors, ICS graduate students, ICS faculty, and ICS staff.  Guests are welcome as long as they are accompanied by an ICS Community member.",
       "startHour": "Anytime",
-      "endHour": "Anytime",
+      "endHour": "8:00PM",
       "owner": "luke@foo.com",
       "tags": [
-        "Moderate Volume",
-        "Internet",
-        "A/C",
-        "Resources"
+
       ],
       "approval": true,
       "webLink": "https://www.ics.hawaii.edu/community/organizations/post-318b/"
@@ -40,9 +37,7 @@
       "nookName": "Hamilton Library (2nd Floor - Main Building) Group Study Rooms",
       "address": "2550 McCarthy Mall",
       "images": [
-        "http://manoa.hawaii.edu/library/wp-content/uploads/2017/10/groupstudy.jpg",
-        "http://manoa.hawaii.edu/library/wp-content/uploads/floorplans/Hamilton-2nd-Floor.png",
-        "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/university-of-hawaii-manoa-7037e8e9.jpg"
+        "http://manoa.hawaii.edu/library/wp-content/uploads/2017/10/groupstudy.jpg"
       ],
       "description": "There are six group study rooms on the 2nd Floor of Hamilton Library (Main) that can be reserved by University of Hawaii students, faculty, and staff.",
       "startHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
@@ -50,28 +45,21 @@
       "owner": "john@foo.com",
       "webLink": "http://manoa.hawaii.edu/library/services/study-spaces/group-study-rooms/",
       "tags": [
-        "Quiet",
-        "Internet",
-        "A/C",
-        "Indoors"
+
         ]
     },
     {
       "nookName": "Learning Emporium",
       "address": "Bilger Addition, Room 209",
       "images": [
-        "learningemporium_files/stacks-image-b6bea4c-1200x904.jpg"
+        "https://i.vimeocdn.com/video/531143463.webp?mw=1100&mh=619&q=70"
       ],
       "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
-      "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
-      "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+
       "owner": "luke@foo.com",
       "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
       "tags": [
-        "Loud",
-        "Resources",
-        "Internet",
-        "Indoors"
+
       ],
       "approval": true
     },
@@ -82,16 +70,11 @@
         "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/sinclair002.jpg"
       ],
       "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
-      "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
-      "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+
       "owner": "luke@foo.com",
       "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
       "tags": [
-        "Quiet",
-        "Food & Drink Friendly",
-        "Long Hours",
-        "Internet",
-        "Indoors"
+
       ],
       "approval": true
     },
@@ -102,14 +85,10 @@
         "rec2.jpg"
       ],
       "description": "A populated place conveniently located near food and beverage stores.",
-      "startHour": "24/7",
-      "endHour": "24/7",
+
       "owner": "luke@foo.com",
       "tags": [
-        "Populated",
-        "Outdoor",
-        "Ample restrooms",
-        "Restaurants nearby"
+
       ],
       "approval": true
     },
@@ -120,12 +99,10 @@
         "rec3.jpg"
       ],
       "description": "Enjoy the outdoor breeze by studying at the beautiful quad.",
-      "startHour": "24/7",
-      "endHour": "24/7",
+
       "owner": "luke@foo.com",
       "tags": [
-        "Outdoor",
-        "Scenic"
+
       ],
       "approval": true,
       "role": "admin",
