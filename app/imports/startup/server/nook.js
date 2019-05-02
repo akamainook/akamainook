@@ -11,11 +11,7 @@ function addData(data) {
 /** Initialize the collection if empty. */
 if (Nooks.find().count() === 0) {
   if (Meteor.settings.defaultNooks) {
-<<<<<<< HEAD
-    console.log('Creating default data.');
-=======
     console.log('Creating default nooks.');
->>>>>>> issue-42
     Meteor.settings.defaultNooks.map(data => addData(data));
   }
 }
