@@ -40,16 +40,15 @@
       "nookName": "Art Building",
       "address": "2535 McCarthy Mall",
       "images": [
-        "app/public/artbuilding.jpg"
+        "artbuilding.jpg"
       ],
       "description": "Not too far away from most classes on campus, has small outdoor tables. ",
-      "startHour": "All Hours",
-      "endHour": "All Hours",
+      "startHour": "Anytime",
+      "endHour": "Anytime",
       "owner": "john@foo.com",
       "webLink": "http://manoa.hawaii.edu/library/services/study-spaces/group-study-rooms/",
       "tags": [
         "Outdoor",
-        "Shade",
         "Food"
       ]
     },
@@ -57,7 +56,7 @@
       "nookName": "Paradise Palms Cafe",
       "address": "2560 McCarthy Mall, Honolulu, HI 96822",
       "images": [
-        "app/public/artbuilding.jpg"
+        "paradisepalms.jpg"
       ],
       "description": "A food court area that serves coffee and food. Also has a microwave.",
       "startHour": "8:00AM",
@@ -68,8 +67,8 @@
         "Food",
         "Drink",
         "Coffee",
-        "WiFi",
-        "Indoors",
+        "Wifi",
+        "Indoor",
         "AC"
       ],
       "approval": true
@@ -89,8 +88,8 @@
         "Quiet",
         "Food",
         "Drink",
-        "WiFi",
-        "Indoors"
+        "Wifi",
+        "Indoor"
       ],
       "approval": true
     },
@@ -127,7 +126,6 @@
       "webLink": "",
       "tags": [
         "Outdoor",
-        "Scenic",
         "Quiet"
       ],
       "approval": true
@@ -139,16 +137,14 @@
         "japanesegarden.jpg"
       ],
       "description": "Beautiful and scenic Japanese garden to ease your mind.",
-      "startHour": "All Hours",
-      "endHour": "All Hours",
+      "startHour": "Anytime",
+      "endHour": "Anytime",
       "owner": "luke@foo.com",
       "webLink": "",
       "tags": [
         "Outdoor",
         "Quiet",
-        "Scenic",
-        "Outdoor",
-        "Scenic"
+        "Outdoor"
       ],
       "approval": true
     },
@@ -204,7 +200,7 @@
       "webLink": "https://library.law.hawaii.edu/",
       "tags": [
         "Indoor",
-        "WiFi",
+        "Wifi",
         "AC",
         "Quiet",
         "Parking",

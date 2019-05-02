@@ -44,7 +44,16 @@ const NookSchema = new SimpleSchema({
   'tags.$': {
     type: String,
     allowedValues: [
-      'Coffee', 'Library', 'Quiet', 'Wifi', 'AC', 'Indoor', 'Outdoor', 'Food', 'Drink', 'Parking'],
+      'Coffee',
+      'Library',
+      'Quiet',
+      'Wifi',
+      'AC',
+      'Indoor',
+      'Outdoor',
+      'Food',
+      'Drink',
+      'Parking'],
   },
   approved: Boolean,
 }, { requiredByDefault: false }, { tracker: Tracker });
