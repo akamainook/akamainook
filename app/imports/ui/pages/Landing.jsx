@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Header } from 'semantic-ui-react';
+import { Card, Container, Grid, Header, Label, Image } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 
 /** A simple static component to render some text for the landing page. */
@@ -22,11 +22,88 @@ class Landing extends React.Component {
                 </p>
               </Grid.Row>
               <Grid.Row>
-               <Header>Browse Nooks</Header>
+                {/* <Header>Browse Nooks</Header> */}
               </Grid.Row>
+              { /* <Grid.Row className="cards">
+                <Grid.Row fluid container columns={3}>
+                  <Grid.Column>
+                    <Card fluid>
+                      <Image src="rec1.jpg"/>
+                      <Card.Content>
+                        <Card.Header>ICSpace</Card.Header>
+                        <Card.Meta>
+                          <span className='location'>POST 318B</span>
+                        </Card.Meta>
+                        <Card.Description>A study room for ICS majors to gather up their ideas.</Card.Description>
+                      </Card.Content>
+                      <Card.Content extra>
+                        <Label as='a' tag>
+                          Microwave
+                        </Label>
+                        <Label as='a' tag>
+                          Air conditioned
+                        </Label>
+                        <Label as='a' tag>
+                          WiFi
+                        </Label>
+                        <Label as='a' tag>
+                          Outlets
+                        </Label>
+                      </Card.Content>
+                    </Card>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Card fluid>
+                      <Image src="rec2.jpg" height="170px"/>
+                      <Card.Content>
+                        <Card.Header>Campus Center</Card.Header>
+                        <Card.Meta>
+                          <span className='location'>2465 Campus Rd, Honolulu, HI 96822</span>
+                        </Card.Meta>
+                        <Card.Description>A populated place conveniently locted near food and beverage
+                          stores. </Card.Description>
+                      </Card.Content>
+                      <Card.Content extra>
+                        <Label as='a' tag>
+                          Populated
+                        </Label>
+                        <Label as='a' tag>
+                          Outdoor
+                        </Label>
+                        <Label as='a' tag>
+                          Ample restrooms
+                        </Label>
+                        <Label as='a' tag>
+                          Restaurants nearby
+                        </Label>
+                      </Card.Content>
+                    </Card>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Card fluid>
+                      <Image src="rec3.jpg" height="170px"/>
+                      <Card.Content>
+                        <Card.Header>The Quad</Card.Header>
+                        <Card.Meta>
+                          <span className='location'>In front of Hawaii Hall</span>
+                        </Card.Meta>
+                        <Card.Description>Enjoy the outdoor breeze by studying at the beautiful quad.</Card.Description>
+                      </Card.Content>
+                      <Card.Content extra>
+                        <Label as='a' tag>
+                          Outdoor
+                        </Label>
+                        <Label as='a' tag>
+                          Scenic
+                        </Label>
+                      </Card.Content>
+                    </Card>
+                  </Grid.Column>
+                </Grid.Row>
+                </Grid.Row> */ }
             </Grid>
           </Container>
-          <p id="credit"><a className="linkColor" src="http://manoa.hawaii.edu/ctahr/nutritionPhD/
+          <p id="credit"><a className="linkColor" href="http://manoa.hawaii.edu/ctahr/nutritionPhD/
                             college-university-of-hawaii/">Hamilton Library 1st Floor</a></p>
         </div>
     );

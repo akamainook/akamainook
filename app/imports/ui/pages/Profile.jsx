@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { Grid, Container, Header, Image, Card, Label } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
-
+import { Nooks } from '../../api/nook/nook';
 
 /** A simple static component to render some text for the Home page. */
 class Profile extends React.Component {
@@ -53,8 +53,6 @@ class Profile extends React.Component {
 Profile.propTypes = {
 };
 
-
-export default Profile;
 export default withTracker(() => {
   const subscription = Meteor.subscribe('ProfileNooks');
   return {

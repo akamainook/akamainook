@@ -16,21 +16,25 @@ class NavBar extends React.Component {
             <Menu.Item as={NavLink} activeClassName="" exact to="/" style={itemStyle}>
               <Image size='small' src='logo.png'/>
             </Menu.Item>
-            <Menu.Item as={NavLink} activeClassName="active" exact to="/nooks" position="right" key='nooks' style={itemStyle}>Nooks</Menu.Item>
+            <Menu.Item as={NavLink} activeClassName="active" exact to="/nooks" position="right"
+                       key='nooks' style={itemStyle}>Nooks</Menu.Item>
             {this.props.currentUser ? (
-                [<Menu.Item as={NavLink} activeClassName="active" exact to="/addnook" key='addnook' style={itemStyle}>Add Nooks</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile' style={itemStyle}>Profile</Menu.Item>,
-                    ]
-                [<Menu.Item as={NavLink} activeClassName="active" exact to="/addnook" key='addnook' style={itemStyle}>Add
-                  Nooks</Menu.Item>,
-                  <Menu.Item as={NavLink} activeClassName="active" exact to="/mynooks" key='mynooks' style={itemStyle}>My
-                    Nooks</Menu.Item>,
-                  <Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'
-                             style={itemStyle}>Profile</Menu.Item>,
+                [<Menu.Item as={NavLink} activeClassName="active" exact to="/addnook"
+                            key='addnook' style={itemStyle}>Add Nooks</Menu.Item>,
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/profile"
+                           key='profile' style={itemStyle}>Profile</Menu.Item>,
+                    ],
+                [<Menu.Item as={NavLink} activeClassName="active" exact to="/addnook"
+                            key='addnook' style={itemStyle}>Add Nooks</Menu.Item>,
+                    <Menu.Item as={NavLink} activeClassName="active" exact to="/mynooks"
+                               key='mynooks' style={itemStyle}>My Nooks</Menu.Item>,
+                  <Menu.Item as={NavLink} activeClassName="active" exact to="/profile"
+                             key='profile' style={itemStyle}>Profile</Menu.Item>,
                 ]
             ) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin' style={itemStyle}>Admin</Menu.Item>
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/admin"
+                           key='admin' style={itemStyle}>Admin</Menu.Item>
             ) : ''}
             <Menu.Item>
               {this.props.currentUser === '' ? (
