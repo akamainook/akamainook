@@ -34,8 +34,9 @@ class ListNook extends React.Component {
             </Grid.Column>
           </Grid>
           <p id="credit">
-            <a className="linkColor" src="http://manoa.hawaii.edu/library/services/
-            study-space/hamilton-library-1st-floor-main-building-reference-area/">View of the Mānoa campus from Mt Tantalus</a></p>
+            <a className="linkColor"
+               href="http://manoa.hawaii.edu/library/services/study-space/hamilton-library-1st-floor-main-building-reference-area/">
+              View of the Mānoa campus from Mt Tantalus</a></p>
         </Container>
         </div>
     );
