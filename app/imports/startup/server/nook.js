@@ -4,6 +4,7 @@ import { Nooks } from '../../api/nook/nook.js';
 
 /** Initialize the database with a default data document. */
 function addData(data) {
+  /* eslint-disable-next-line */
   console.log(`  Adding: ${data.name} (${data.owner})`);
   Nooks.insert(data);
 }
@@ -11,6 +12,7 @@ function addData(data) {
 /** Initialize the collection if empty. */
 if (Nooks.find().count() === 0) {
   if (Meteor.settings.defaultNooks) {
+    /* eslint-disable-next-line */
     console.log('Creating default data.');
     Meteor.settings.defaultNooks.map(data => addData(data));
   }
