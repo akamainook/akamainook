@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Header, Card } from 'semantic-ui-react';
-import { Nooks } from '/imports/api/stuff/stuff';
+import { Nooks } from '/imports/api/nook/nook';
 import AdminComponent from '/imports/ui/components/AdminComponent.jsx';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
