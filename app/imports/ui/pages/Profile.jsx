@@ -41,7 +41,7 @@ Profile.propTypes = {
 };
 
 export default withTracker(() => {
-  const subscription = Meteor.subscribe('MyNooks');
+  const subscription = Meteor.subscribe('ProfileNooks');
   return {
     nooks: Nooks.find({}).fetch(),
     ready: (subscription.ready()),
