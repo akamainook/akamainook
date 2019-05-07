@@ -2,6 +2,8 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Grid, Container, Header, Image, Card, Label } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
+import { withTracker } from 'meteor/react-meteor-data';
+
 
 /** A simple static component to render some text for the Home page. */
 class Profile extends React.Component {
@@ -51,7 +53,6 @@ class Profile extends React.Component {
 Profile.propTypes = {
 };
 
-<<<<<<< HEAD
 export default withTracker(() => {
   const subscription = Meteor.subscribe('ProfileNooks');
   return {
@@ -59,6 +60,3 @@ export default withTracker(() => {
     ready: (subscription.ready()),
   };
 })(Profile);
-=======
-export default Profile;
->>>>>>> parent of 0145bb0... Changed landing page
