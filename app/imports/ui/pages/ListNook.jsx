@@ -38,6 +38,25 @@ class ListNook extends React.Component {
                href="http://manoa.hawaii.edu/library/services/study-space/hamilton-library-1st-floor-main-building-reference-area/">
               View of the Mānoa campus from Mt Tantalus</a></p>
         </Container>
+          <Container>
+            <Header as="h1" className="title" textAlign="center">Find your Nook</Header>
+            <Grid centered rows={2}>
+              <Grid.Row>
+                <Container>
+                  <Embed
+                      defaultActive={true}
+                      url='https://www.google.com/maps/d/u/0/embed?mid=18hNvc3Mp7H4t8UF6Ajay0mIo5FUtfuiH'
+                  />
+                </Container>
+              </Grid.Row>
+              <Grid.Row>
+                <Card.Group centered>
+                  {this.props.nooks.map((nook, index) => <Nook key={index} nook={nook}/>)}
+                </Card.Group>
+              </Grid.Row>
+            </Grid>
+            <p id="credit">Photo by Lisa Fotios from Pexels</p>
+          </Container>
         </div>
     );
   }

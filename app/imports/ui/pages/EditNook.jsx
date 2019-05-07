@@ -47,7 +47,7 @@ class EditNook extends React.Component {
                 <SelectField name='endHour'/>
                 <TextField name='webLink'/>
                 <LongTextField name='description'/>
-                <TextField name='tags'/>
+                <SelectField checkboxes={true} name='tags'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner'/>
