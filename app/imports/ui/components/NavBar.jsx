@@ -18,9 +18,19 @@ class NavBar extends React.Component {
             </Menu.Item>
             <Menu.Item as={NavLink} activeClassName="active" exact to="/nooks" position="right" key='nooks' style={itemStyle}>Nooks</Menu.Item>
             {this.props.currentUser ? (
+<<<<<<< HEAD
                 [<Menu.Item as={NavLink} activeClassName="active" exact to="/addnook" key='addnook' style={itemStyle}>Add Nooks</Menu.Item>,
                 <Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile' style={itemStyle}>Profile</Menu.Item>,
                     ]
+=======
+                [<Menu.Item as={NavLink} activeClassName="active" exact to="/addnook" key='addnook' style={itemStyle}>Add
+                  Nooks</Menu.Item>,
+                  <Menu.Item as={NavLink} activeClassName="active" exact to="/mynooks" key='mynooks' style={itemStyle}>My
+                    Nooks</Menu.Item>,
+                  <Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'
+                             style={itemStyle}>Profile</Menu.Item>,
+                ]
+>>>>>>> parent of d2e1565... Fixed ESLint Errors
             ) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
                 <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin' style={itemStyle}>Admin</Menu.Item>

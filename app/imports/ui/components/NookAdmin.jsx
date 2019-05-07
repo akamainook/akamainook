@@ -13,7 +13,6 @@ class NookAdmin extends React.Component {
   }
 
   onClick() {
-    /* eslint-disable-next-line */
     if (confirm('Are you sure you want to delete this nook?')) {
       Nooks.remove(this.props.nook._id, this.deleteCallBack);
     }
@@ -22,7 +21,8 @@ class NookAdmin extends React.Component {
   deleteCallback(error) {
     if (error) {
       Bert.alert({ type: 'danger', message: 'Delete failed' });
-    } else {
+    }
+    else {
       Bert.alert({ type: 'success', message: 'Delete successful' });
     }
   }

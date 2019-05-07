@@ -10,7 +10,11 @@ function addData(data) {
 
 /** Initialize the collection if empty. */
 if (Nooks.find().count() === 0) {
+<<<<<<< HEAD
   if (Meteor.settings.defaultData) {
+=======
+  if (Meteor.settings.defaultNooks) {
+>>>>>>> parent of d2e1565... Fixed ESLint Errors
     console.log('Creating default data.');
     Meteor.settings.defaultNooks.map(data => addData(data));
   }
