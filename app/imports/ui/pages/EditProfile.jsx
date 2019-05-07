@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Bert } from 'meteor/themeteorchef:bert';
 import { Container, Form, Grid, Header, Segment, Checkbox, Image } from 'semantic-ui-react';
+/* import { Redirect } from 'react-router-dom';
+import PropType from 'prop-types'; */
+/* import { Accounts } from 'meteor/accounts-base';
+import { Auth } from 'aws-amplify'; */
 
 /** Code inspired by https://serverless-stack.com/chapters/allow-users-to-change-passwords.html */
 export default class EditProfile extends React.Component {

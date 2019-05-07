@@ -6,9 +6,6 @@ import { withRouter } from 'react-router-dom';
 /** Renders a single card in the List Nook table. See pages/ListNook.jsx. */
 class Nook extends React.Component {
   render() {
-    const tagArray = this.props.nook.tags.map(function (tag, i) {
-      return <Label key={i}>{tag}</Label>;
-    });
     return (
         <Card>
           <Card.Content>
@@ -23,7 +20,9 @@ class Nook extends React.Component {
             </Card.Description>
           </Card.Content>
           <Card.Content>
-            {tagArray}
+            <Label as='a' tag>
+              {this.props.nook.tags}
+            </Label>
           </Card.Content>
         </Card>
     );
