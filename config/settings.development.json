@@ -128,10 +128,7 @@
         "Scenic"
       ],
       "approval": true,
-      "role": "admin",
-      "profile": {
-        "image": "boy.png"
-      }
+      "role": "admin"
     }
   ]
 }

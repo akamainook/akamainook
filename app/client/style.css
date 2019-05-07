@@ -80,12 +80,23 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.googleMaps {
+  height: 50%;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
 #description {
   font-size: 30px;
   font-family: 'Montserrat', sans-serif;
   color: white;
   margin-bottom: 75px;
   text-align: center;
+}
+
+.nookSearch {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .landing.cards {
@@ -102,6 +113,14 @@ body {
   text-align-all: center;
   font-size: 70px;
   color: ghostwhite;
+}
+
+.displayNooks {
+  display: inline;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 100px;
 }
 
 #akamai {
@@ -132,9 +151,6 @@ body {
   margin-left: 35px;
 }
 
-.header {
-  font-family: 'Montserrat', sans-serif;
-}
 
 .form {
   font-family: 'Montserrat', sans-serif;
@@ -148,3 +164,4 @@ body {
 .linkColor{
   color: #FFFF;
 }
+

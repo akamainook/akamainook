@@ -26,8 +26,6 @@ class Footer extends React.Component {
             <Grid.Column> Credits
               <hr/>
               <List>
-                <List.Item>Background images:</List.Item>
-                <List.Item>www.pexels.com</List.Item>
                 <List.Item>Logos created using:</List.Item>
                 <List.Item>www.logomakr.com</List.Item>
                 <List.Item>User icons provided by:</List.Item>
