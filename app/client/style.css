@@ -44,7 +44,7 @@ body {
 }
 
 .nooksBackground {
-  background-image: url("UHOverhead.jpg");
+  background-image: url("cafebackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 20px;
@@ -68,7 +68,7 @@ body {
 }
 
 .middleContent {
-  background-image: url("hamiltonLibrary.jpg");
+  background-image: url("background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-bottom: 20px;

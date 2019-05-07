@@ -226,7 +226,10 @@
       "profile": {
         "image": "cat.png"
       }
+<<<<<<< HEAD
 >>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
+=======
+>>>>>>> parent of 0352ed9... Changed Backgound image for Landing and Nooks. FIxed nook.js and json
     }
   ]
 }
