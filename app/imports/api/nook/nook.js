@@ -23,7 +23,6 @@ const NookSchema = new SimpleSchema({
       '6:30PM', '7:00PM', '7:30PM', '8:00PM', '8:30PM', '9:00PM', '9:30PM', '10:00PM', '10:30PM',
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       '11:00PM', '11:30PM', 'All Hours'],
 =======
       '11:00PM', '11:30PM', '24 Hours'],
@@ -31,9 +30,6 @@ const NookSchema = new SimpleSchema({
 =======
       '11:00PM', '11:30PM'],
 >>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
-=======
-      '11:00PM', '11:30PM'],
->>>>>>> parent of 0352ed9... Changed Backgound image for Landing and Nooks. FIxed nook.js and json
     defaultValue: '8:00AM',
   },
   endHour: {
@@ -47,7 +43,6 @@ const NookSchema = new SimpleSchema({
       '6:30PM', '7:00PM', '7:30PM', '8:00PM', '8:30PM', '9:00PM', '9:30PM', '10:00PM', '10:30PM',
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
       '11:00PM', '11:30PM', 'All Hours'],
 =======
       '11:00PM', '11:30PM', '24 Hours'],
@@ -55,9 +50,6 @@ const NookSchema = new SimpleSchema({
 =======
       '11:00PM', '11:30PM'],
 >>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
-=======
-      '11:00PM', '11:30PM'],
->>>>>>> parent of 0352ed9... Changed Backgound image for Landing and Nooks. FIxed nook.js and json
     defaultValue: '8:00PM',
   },
   owner: { type: String, required: true },
