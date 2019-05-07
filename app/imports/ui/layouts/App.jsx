@@ -12,7 +12,6 @@ import ListNookAdmin from '../pages/ListNookAdmin';
 import AddNook from '../pages/AddNook';
 import EditNook from '../pages/EditNook';
 import NotFound from '../pages/NotFound';
-import Home from '../pages/Home';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
@@ -32,7 +31,6 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/profile" component={Profile}/>
-              <Route path="/home" component={Home}/>
               <ProtectedRoute path="/addnook" component={AddNook}/>
               <ProtectedRoute path="/mynooks" component={ListNookUser}/>
               <Route path="/nooks" component={ListNook}/>

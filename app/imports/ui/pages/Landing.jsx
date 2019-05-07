@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container, Grid, Header, Label, Image } from 'semantic-ui-react';
+import { Container, Grid } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 
 /** A simple static component to render some text for the landing page. */
