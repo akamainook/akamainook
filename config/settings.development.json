@@ -45,6 +45,7 @@
         "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/university-of-hawaii-manoa-7037e8e9.jpg"
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
       "description": "There are six group study rooms on the 2nd Floor of Hamilton Library (Main) that can be reserved by University of Hawaii students, faculty, and staff.",
       "startHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
       "endHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
@@ -68,6 +69,19 @@
         "Food"
       ]
 >>>>>>> parent of b003028... Merge branch 'issue-42'
+=======
+      "description": "There are six group study rooms on the 2nd Floor of Hamilton Library (Main) that can be reserved by University of Hawaii students, faculty, and staff.",
+      "startHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
+      "endHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
+      "owner": "john@foo.com",
+      "webLink": "http://manoa.hawaii.edu/library/services/study-spaces/group-study-rooms/",
+      "tags": [
+        "Quiet",
+        "Internet",
+        "A/C",
+        "Indoors"
+        ]
+>>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
     },
     {
       "nookName": "Learning Emporium",
@@ -75,6 +89,7 @@
       "images": [
         "learningemporium_files/stacks-image-b6bea4c-1200x904.jpg"
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
       "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
@@ -95,6 +110,17 @@
         "Food",
         "WiFi",
 >>>>>>> parent of b003028... Merge branch 'issue-42'
+=======
+      "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
+      "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+      "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+      "owner": "luke@foo.com",
+      "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
+      "tags": [
+        "Loud",
+        "Resources",
+        "Internet",
+>>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
         "Indoors"
       ],
       "approval": true
@@ -107,12 +133,17 @@
       ],
       "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
       "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
 =======
       "startHour": "All Hours",
       "endHour": "All Hours",
 >>>>>>> parent of b003028... Merge branch 'issue-42'
+=======
+      "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+      "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
+>>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
       "owner": "luke@foo.com",
       "webLink": "https://natsci.manoa.hawaii.edu/learningemporium.php",
       "tags": [
@@ -136,6 +167,7 @@
       "owner": "luke@foo.com",
       "tags": [
 <<<<<<< HEAD
+<<<<<<< HEAD
         "Populated",
         "Outdoor",
         "Ample restrooms",
@@ -146,6 +178,12 @@
         "Restrooms",
         "WiFi"
 >>>>>>> parent of b003028... Merge branch 'issue-42'
+=======
+        "Populated",
+        "Outdoor",
+        "Ample restrooms",
+        "Restaurants nearby"
+>>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
       ],
       "approval": true
     },
@@ -157,19 +195,38 @@
       ],
       "description": "Enjoy the outdoor breeze by studying at the beautiful quad.",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "startHour": "24/7",
       "endHour": "24/7",
 =======
       "startHour": "All Hours",
       "endHour": "All Hours",
 >>>>>>> parent of b003028... Merge branch 'issue-42'
+=======
+      "startHour": "24/7",
+      "endHour": "24/7",
+>>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
       "owner": "luke@foo.com",
       "tags": [
         "Outdoor",
         "Scenic"
       ],
       "approval": true,
+<<<<<<< HEAD
       "role": "admin"
+=======
+      "role": "admin",
+      "profile": {
+        "image": "boy.png"
+      }
+    },
+    {
+      "email": "luke@foo.com",
+      "password": "changedme",
+      "profile": {
+        "image": "cat.png"
+      }
+>>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
     }
   ]
 }
