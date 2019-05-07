@@ -4,15 +4,13 @@ import { Nooks } from '../../api/nooks/nooks';
 
 /** Initialize the database with a default data document. */
 function addData(data) {
-  /* eslint-disable-next-line */
-  console.log(`  Adding: ${data.lastName} (${data.owner})`); // eslint-disable-line
+  console.log(`  Adding: ${data.lastName} (${data.owner})`);
   Nooks.insert(data);
 }
 
 /** Initialize the collection if empty. */
 if (Nooks.find().count() === 0) {
   if (Meteor.settings.defaultContacts) {
-    /* eslint-disable-next-line */
     console.log('Creating default data.');
     Meteor.settings.defaultContacts.map(data => addData(data));
   }
