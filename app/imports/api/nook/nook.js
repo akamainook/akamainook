@@ -22,14 +22,10 @@ const NookSchema = new SimpleSchema({
       '1:00PM', '1:30PM', '2:00PM', '2:30PM', '3:30PM', '4:30PM', '5:00PM', '5:30PM', '6:00PM',
       '6:30PM', '7:00PM', '7:30PM', '8:00PM', '8:30PM', '9:00PM', '9:30PM', '10:00PM', '10:30PM',
 <<<<<<< HEAD
-<<<<<<< HEAD
       '11:00PM', '11:30PM', 'All Hours'],
 =======
       '11:00PM', '11:30PM', '24 Hours'],
 >>>>>>> parent of b003028... Merge branch 'issue-42'
-=======
-      '11:00PM', '11:30PM'],
->>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
     defaultValue: '8:00AM',
   },
   endHour: {
@@ -42,14 +38,10 @@ const NookSchema = new SimpleSchema({
       '1:00PM', '1:30PM', '2:00PM', '2:30PM', '3:30PM', '4:30PM', '5:00PM', '5:30PM', '6:00PM',
       '6:30PM', '7:00PM', '7:30PM', '8:00PM', '8:30PM', '9:00PM', '9:30PM', '10:00PM', '10:30PM',
 <<<<<<< HEAD
-<<<<<<< HEAD
       '11:00PM', '11:30PM', 'All Hours'],
 =======
       '11:00PM', '11:30PM', '24 Hours'],
 >>>>>>> parent of b003028... Merge branch 'issue-42'
-=======
-      '11:00PM', '11:30PM'],
->>>>>>> parent of 0a72d98... Added All 10 Default Accounts to json file.
     defaultValue: '8:00PM',
   },
   owner: { type: String, required: true },
