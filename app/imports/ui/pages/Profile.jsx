@@ -1,11 +1,19 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Grid, Container, Header, Image, Card, Label } from 'semantic-ui-react';
+import { Grid, Container, Header, Image, Card, Loader } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
+import { Nooks } from '/imports/api/nook/nook';
+import { withTracker } from 'meteor/react-meteor-data';
+import PropTypes from 'prop-types';
+import NookAdmin from '/imports/ui/components/NookAdmin';
 
 /** A simple static component to render some text for the Home page. */
 class Profile extends React.Component {
   render() {
+    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
+  }
+
+  renderPage() {
     return (
         <Container className="profile">
           <Grid container>
@@ -17,30 +25,9 @@ class Profile extends React.Component {
             </Grid.Column>
             <Grid.Column width={10}>
               <Header>Your Nooks:</Header>
-              <Card fluid>
-                <Image src="rec1.jpg"/>
-                <Card.Content>
-                  <Card.Header>ICSpace</Card.Header>
-                  <Card.Meta>
-                    <span className='location'>POST 318B</span>
-                  </Card.Meta>
-                  <Card.Description>A study room for ICS majors to gather up their ideas.</Card.Description>
-                </Card.Content>
-                <Card.Content extra>
-                  <Label as='a' tag>
-                    Microwave
-                  </Label>
-                  <Label as='a' tag>
-                    Air conditioned
-                  </Label>
-                  <Label as='a' tag>
-                    WiFi
-                  </Label>
-                  <Label as='a' tag>
-                    Outlets
-                  </Label>
-                </Card.Content>
-              </Card>
+              <Card.Group>
+                {this.props.nooks.map((nook, index) => <NookAdmin key={index} nook={ nook }/>)}
+              </Card.Group>
             </Grid.Column>
           </Grid>
         </Container>
@@ -49,9 +36,10 @@ class Profile extends React.Component {
 }
 
 Profile.propTypes = {
+  nooks: PropTypes.array.isRequired,
+  ready: PropTypes.bool.isRequired,
 };
 
-<<<<<<< HEAD
 export default withTracker(() => {
   const subscription = Meteor.subscribe('ProfileNooks');
   return {
@@ -59,6 +47,3 @@ export default withTracker(() => {
     ready: (subscription.ready()),
   };
 })(Profile);
-=======
-export default Profile;
->>>>>>> parent of 0145bb0... Changed landing page
