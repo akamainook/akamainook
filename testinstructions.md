@@ -1,6 +1,6 @@
 1) Sign into the website using the credentials:
-      Username- luke@foo.com 
-      Password- changedme
+      Username - luke@foo.com 
+      Password - changedme
 
 2) Click on the Searchbar and type in "Sinclair Library".
 
@@ -19,18 +19,6 @@
    
    Once finished, Submit the nook 
 
-6)  Log out of 'luke@foo.com' to and sign into an admin account using the following credentials:
-      Username- notadmin@foo.com
-      Password- notpassword
+6) Click on the List Nooks tab in the menu bar.
 
-7) Click on the Admin tab found on the menubar located on the top of the page.
-
-8) Determine if the nook 'Hamilton Library' appears on the admin's page.
-
-9) Click on the green checkmark button to approve the nook.
-
-10) Sign out of 'notadmin' and sign back into 'luke'.
-
-11) Click on the List Nooks tab in the menu bar.
-
-12) Verify that Hamilton Library exists on the page. 
+7) Verify that Hamilton Library exists on the page. 
