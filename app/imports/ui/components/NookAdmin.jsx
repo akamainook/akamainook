@@ -5,6 +5,26 @@ import { withRouter, Link } from 'react-router-dom';
 
 /** Renders a single card in the List Nook table. See pages/ListNook.jsx. */
 class NookAdmin extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    if (confirm('Are you sure you want to delete this nook?')) {
+      Nooks.remove(this.props.nook._id, this.deleteCallBack);
+    }
+  }
+
+  deleteCallback(error) {
+    if (error) {
+      Bert.alert({ type: 'danger', message: 'Delete failed' });
+    }
+    else {
+      Bert.alert({ type: 'success', message: 'Delete successful' });
+    }
+  }
+
   render() {
     return (
         <Card>
