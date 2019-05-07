@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, Image, Label } from 'semantic-ui-react';
+import { Card, Image, Label, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
+import { Bert } from 'meteor/themeteorchef:bert';
+import { Nooks } from '../../api/nook/nook';
 
 /** Renders a single card in the List Nook table. See pages/ListNook.jsx. */
 class NookAdmin extends React.Component {
@@ -11,6 +13,7 @@ class NookAdmin extends React.Component {
   }
 
   onClick() {
+    /* eslint-disable-next-line */
     if (confirm('Are you sure you want to delete this nook?')) {
       Nooks.remove(this.props.nook._id, this.deleteCallBack);
     }
@@ -19,17 +22,19 @@ class NookAdmin extends React.Component {
   deleteCallback(error) {
     if (error) {
       Bert.alert({ type: 'danger', message: 'Delete failed' });
-    }
-    else {
+    } else {
       Bert.alert({ type: 'success', message: 'Delete successful' });
     }
   }
 
   render() {
+    const tagArray = this.props.nook.tags.map(function (tag, i) {
+      return <Label key={i}>{tag}</Label>;
+    });
     return (
         <Card>
           <Card.Content>
-            <Image fluid src={this.props.nook.images} size="large"/>
+            <Image src={this.props.nook.images} size="large"/>
           </Card.Content>
           <Card.Content>
             <Card.Header>{this.props.nook.nookName}</Card.Header>
@@ -38,12 +43,15 @@ class NookAdmin extends React.Component {
             <Card.Description>
               {this.props.nook.description}
             </Card.Description>
-            <Label as='a' tag>
-              {this.props.nook.tags}
-            </Label>
+          </Card.Content>
+          <Card.Content>
+            {tagArray}
           </Card.Content>
           <Card.Content extra>
             <Link to={`/edit/${this.props.nook._id}`}>Edit</Link>
+          </Card.Content>
+          <Card.Content extra>
+            <Button onClick={this.onClick}>Delete</Button>
           </Card.Content>
         </Card>
     );
