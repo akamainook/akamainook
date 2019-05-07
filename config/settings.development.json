@@ -40,21 +40,6 @@
       "nookName": "Art Building",
       "address": "2535 McCarthy Mall",
       "images": [
-        "http://manoa.hawaii.edu/library/wp-content/uploads/2017/10/groupstudy.jpg",
-        "http://manoa.hawaii.edu/library/wp-content/uploads/floorplans/Hamilton-2nd-Floor.png",
-        "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/university-of-hawaii-manoa-7037e8e9.jpg"
-      ],
-      "description": "There are six group study rooms on the 2nd Floor of Hamilton Library (Main) that can be reserved by University of Hawaii students, faculty, and staff.",
-      "startHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
-      "endHour": "Varies-(http://manoa.hawaii.edu/library/about/visiting-the-library/hours/)",
-      "owner": "john@foo.com",
-      "webLink": "http://manoa.hawaii.edu/library/services/study-spaces/group-study-rooms/",
-      "tags": [
-        "Quiet",
-        "Internet",
-        "A/C",
-        "Indoors"
-        ]
         "artbuilding.jpg"
       ],
       "description": "Not too far away from most classes on campus, has small outdoor tables. ",
@@ -73,19 +58,12 @@
       "images": [
         "paradisepalms.jpg"
       ],
-      "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
-      "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
-      "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
       "description": "A food court area that serves coffee and food. Also has a microwave.",
       "startHour": "8:00AM",
       "endHour": "5:00PM",
       "owner": "luke@foo.com",
       "webLink": "",
       "tags": [
-        "Loud",
-        "Resources",
-        "Internet",
-        "Indoors"
         "Food",
         "Drink",
         "Coffee",
@@ -101,9 +79,6 @@
       "images": [
         "http://manoa.hawaii.edu/undergrad/ssc/wp-content/uploads/2014/04/sinclair002.jpg"
       ],
-      "description": "The College of Natural Sciences Learning Emporium is a one-stop resource center for introductory study in the fields of mathematics, chemistry, information & computer sciences, and physics. We encourage students to study and complete their class assignments in the Emporium, where assistance is readily available.",
-      "startHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
-      "endHour": "Varies-(http://uhnatsci.org/emporium/tutorschedules.php)",
       "description": "A popular destination for UH students, faculty, and staff where they can find music books, magazines, sheet music, videos, CDs, DVDs, audiocassettes, phonodiscs, other media, and course reserve services.  There is wireless access on every floor with ample and varied study space available throughout the building.",
       "startHour": "Anytime",
       "endHour": "Anytime",
@@ -130,10 +105,6 @@
       "owner": "luke@foo.com",
       "webLink": "",
       "tags": [
-        "Populated",
-        "Outdoor",
-        "Ample restrooms",
-        "Restaurants nearby"
         "Food",
         "Drink",
         "Coffee",
