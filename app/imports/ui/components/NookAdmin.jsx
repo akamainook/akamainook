@@ -5,7 +5,7 @@ import { withRouter, Link } from 'react-router-dom';
 
 /** Renders a single card in the List Nook table. See pages/ListNook.jsx. */
 class NookAdmin extends React.Component {
-
+<<<<<<< HEAD
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
@@ -26,6 +26,8 @@ class NookAdmin extends React.Component {
     }
   }
 
+=======
+>>>>>>> parent of 0145bb0... Changed landing page
   render() {
     return (
         <Card>
