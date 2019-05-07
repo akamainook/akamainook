@@ -1,12 +1,11 @@
 import React from 'react';
-import { Card, Image, Label, Button } from 'semantic-ui-react';
+import { Card, Image, Label } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
-import { Bert } from 'meteor/themeteorchef:bert';
-import { Nooks } from '../../api/nook/nook';
 
 /** Renders a single card in the List Nook table. See pages/ListNook.jsx. */
 class NookAdmin extends React.Component {
+<<<<<<< HEAD
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
@@ -27,10 +26,9 @@ class NookAdmin extends React.Component {
     }
   }
 
+=======
+>>>>>>> parent of 0145bb0... Changed landing page
   render() {
-    const tagArray = this.props.nook.tags.map(function (tag, i) {
-      return <Label key={i}>{tag}</Label>;
-    });
     return (
         <Card>
           <Card.Content>
@@ -43,15 +41,12 @@ class NookAdmin extends React.Component {
             <Card.Description>
               {this.props.nook.description}
             </Card.Description>
-          </Card.Content>
-          <Card.Content>
-            {tagArray}
+            <Label as='a' tag>
+              {this.props.nook.tags}
+            </Label>
           </Card.Content>
           <Card.Content extra>
             <Link to={`/edit/${this.props.nook._id}`}>Edit</Link>
-          </Card.Content>
-          <Card.Content extra>
-            <Button onClick={this.onClick}>Delete</Button>
           </Card.Content>
         </Card>
     );

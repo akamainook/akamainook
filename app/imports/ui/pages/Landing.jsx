@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Grid, Button } from 'semantic-ui-react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { Container, Grid, Header } from 'semantic-ui-react';
+import { withRouter } from 'react-router-dom';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -22,7 +22,7 @@ class Landing extends React.Component {
                 </p>
               </Grid.Row>
               <Grid.Row>
-               <Button as={NavLink} exact to="/nooks" fluid >Browse Nooks</Button>
+               <Header>Browse Nooks</Header>
               </Grid.Row>
             </Grid>
           </Container>
