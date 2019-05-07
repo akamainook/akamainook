@@ -21,6 +21,7 @@ Meteor.publish('Nooks', function publish() {
     return Nooks.find();
 });
 
+<<<<<<< HEAD
 Meteor.publish('ProfileNooks', function publish() {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
@@ -29,6 +30,8 @@ Meteor.publish('ProfileNooks', function publish() {
   return this.ready();
 });
 
+=======
+>>>>>>> parent of b003028... Merge branch 'issue-42'
 /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
 Meteor.publish('NookAdmin', function publish() {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {

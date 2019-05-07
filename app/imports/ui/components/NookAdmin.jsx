@@ -5,6 +5,7 @@ import { withRouter, Link } from 'react-router-dom';
 
 /** Renders a single card in the List Nook table. See pages/ListNook.jsx. */
 class NookAdmin extends React.Component {
+<<<<<<< HEAD
 
   constructor(props) {
     super(props);
@@ -26,6 +27,8 @@ class NookAdmin extends React.Component {
     }
   }
 
+=======
+>>>>>>> parent of b003028... Merge branch 'issue-42'
   render() {
     return (
         <Card>
